@@ -42,7 +42,7 @@ export default function AboutUs() {
     return (
         <div className="overflow-x-hidden">
             <HeroSection>
-                <h1 className='text-[60px]  font-[700] leading-[120%]'>
+                <h1 className='text-[40px] md:text-[60px]  font-[700] leading-[120%]'>
                     About us
                 </h1>
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
@@ -53,9 +53,9 @@ export default function AboutUs() {
             </HeroSection>
             <main className="bg-[#FAFAFA] ">
 
-                <section className='mt-[126px] min-h-[50vh] flex flex-col'>
-                    <div className='w-[90%] mx-auto flex gap-6 flex-1'>
-                        <div className='flex gap-2 w-1/2 '>
+                <section className='mt-[60px] md:mt-[126px] min-h-[50vh] flex flex-col'>
+                    <div className='w-[90%] mx-auto flex flex-col md:flex-row gap-6 flex-1'>
+                        <div className='hidden md:flex gap-2 w-full md:w-1/2 '>
                             <div className="flex w-full ">
                                 <div className=' relative w-[60%] rounded-[8px] '>
                                     <Image
@@ -85,8 +85,8 @@ export default function AboutUs() {
                                 </div>
                             </div>
                         </div>
-                        <div className='w-1/2 h-full'>
-                            <h2 className='text-[40px]  font-[700] leading-[120%] mt-[32px]'>
+                        <div className='w-full md:w-1/2 h-full'>
+                            <h2 className='text-[34px] md:text-[40px]  font-[700] leading-[120%] mt-[32px]'>
                                 Our Company Been Working Successfully For
                                 <span className='text-[#1986C3]'>
                                     Your Financial Business Growth
@@ -104,9 +104,9 @@ export default function AboutUs() {
                     </div>
                 </section>
                 <section className='mt-[126px] min-h-[60vh] flex flex-col'>
-                    <div className='w-[90%] mx-auto flex-1 flex gap-4 '>
-                        <div className='w-1/2 mt-[32px]'>
-                            <h2 className='text-[40px] font-[700] leading-[120%] '>
+                    <div className='w-[90%] mx-auto flex-1 flex flex-col-reverse md:flex-row gap-4 '>
+                        <div className='w-full md:w-1/2 mt-[32px]'>
+                            <h2 className='text-[34px] md:text-[40px] font-[700] leading-[120%] '>
                                 <p> Why Choose</p>
                                 <p className='text-[#1986C3]'>
                                     Earth Link Group
@@ -122,8 +122,8 @@ export default function AboutUs() {
                                 </div>)}
                             </div>
                         </div>
-                        <div className='flex gap-2 w-1/2'>
-                            <div className="w-full relative rounded-[8px] ">
+                        <div className='flex gap-2 w-full md:w-1/2'>
+                            <div className="w-full relative h-[50vh] rounded-[8px] ">
                                 <Image
                                     fill
                                     alt='about-us-4'
@@ -137,30 +137,30 @@ export default function AboutUs() {
                 <section className='mt-[126px] min-h-[60vh] flex flex-col'>
                     <div className='w-[90%] mx-auto flex-1 '>
                         <div className="flex justify-center py-[24px] w-full">
-                            <div className='w-[50%]'>
-                                <h2 className='text-[40px] text-center font-semibold'>Our Mission & Core Values</h2>
+                            <div className='w-full md:w-[50%]'>
+                                <h2 className='text-[34px] md:text-[40px] text-center font-semibold'>Our Mission & Core Values</h2>
                                 <p className='mt-[32px] text-center text-[18px] leading-[150%]'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex gap-12">
-                            <div className='w-1/2 flex flex-col gap-[24px] p-[32px] rounded-[8px] shadow-lg'>
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+                            <div className='w-full md:w-1/2 flex flex-col gap-[24px] p-[32px] rounded-[8px] shadow-lg'>
                                 <div className="rounded-[8px] w-[64px] h-[58px] flex justify-center items-center text-white bg-[#1986C3]">
                                     <SlLike />
                                 </div>
-                                <h4 className='text-[32px] font-[700]'>
+                                <h4 className='text-[28px] md:text-[32px] font-[700]'>
                                     Our Mission
                                 </h4>
                                 <p className='text-[18px] leading-[150%]'>
                                     By opening up local offices in Africa, circumventing traditional channels and engaging with customers directly, we are able to provide higher-quality, secure and reliable business set-up, research and management services at a fraction market price.
                                 </p>
                             </div>
-                            <div className='w-1/2 flex flex-col gap-[24px] p-[32px] rounded-[8px] shadow-lg'>
+                            <div className='w-full md:w-1/2 flex flex-col gap-[24px] p-[32px] rounded-[8px] shadow-lg'>
                                 <div className=" w-[64px] h-[58px]  rounded-[8px] flex justify-center items-center text-white bg-[#1986C3]">
                                     <CiMedal />
                                 </div>
-                                <h4 className='text-[32px] font-[700]'>
+                                <h4 className='text-[28px] md:text-[32px] font-[700]'>
                                     Our Vision
                                 </h4>
                                 <p className='text-[18px] leading-[150%]'>
@@ -171,19 +171,19 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </section>
-                <section className="my-[114px] min-h-[60vh] flex flex-col">
+                <section className=" my-[70px] md:my-[114px] min-h-[60vh] flex flex-col">
                     <div className='flex-1 w-[90%] mx-auto'>
                         <div className="flex justify-center py-[24px] w-full">
-                            <div className='w-[50%] flex flex-col items-center'>
+                            <div className='w-full md:w-[50%] flex flex-col items-center'>
                                 <p className='text-[14px] w-fit leading-[120%] py-[10px] px-[38px] text-center rounded-[12px] bg-[#F2F2F2] text-[#5C6265] mb-[14px]'>OUR TEAM</p>
-                                <h2 className='text-[40px] text-center font-semibold'>Expert Team Members</h2>
+                                <h2 className='text-[34px] md:text-[40px] text-center font-semibold'>Expert Team Members</h2>
                                 <p className='mt-[32px] text-center text-[18px] leading-[150%]'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                                 </p>
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-4 gap-6'>
+                        <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
                             {team.map((member) =>
                             (<div key={member.id} className="col-span-1 bg-white rounded-[20px] shadow-lg overflow-hidden">
                                 {/* Image Section */}
@@ -192,7 +192,7 @@ export default function AboutUs() {
                                         fill
                                         alt={member.name}
                                         src={member.profilePic}
-                                        className="object-cover"
+                                        className="object-contain md:object-cover"
                                     />
                                 </div>
 
@@ -233,9 +233,9 @@ export default function AboutUs() {
                 <section className="mt-[114px]   min-h-[60vh] flex flex-col">
                     <div className='flex-1 w-[90%] mx-auto'>
                         <div className="flex justify-center py-[24px] w-full">
-                            <div className='w-[50%] flex flex-col items-center'>
+                            <div className='w-full md:w-[50%] flex flex-col items-center'>
                                 <p className='text-[14px] w-fit leading-[120%] py-[10px] px-[38px] text-center rounded-[12px] bg-[#F2F2F2] text-[#5C6265] mb-[14px]'>OUR TESTIMONIALS</p>
-                                <h2 className='text-[40px] text-center font-semibold'>Don’t Believe Us? People Talk About It</h2>
+                                <h2 className='text-[34px] md:text-[40px] text-center font-semibold'>Don’t Believe Us? People Talk About It</h2>
                                 <p className='mt-[32px] text-center text-[18px] leading-[150%]'>
                                     See what our clients say about working with us. Their success speaks for our dedication and expertise.
                                 </p>
@@ -288,14 +288,14 @@ export default function AboutUs() {
                     </div>
                 </section>
                 <section>
-                    <div className='w-[90%] mx-auto py-[126px] flex'>
-                        <div className="w-[40%]">
-                            <p className='text-[40px] font-[700] leading-[120%]'>Our Worldwide Network of Trusted Partners</p>
+                    <div className='w-[90%] mx-auto py-[126px] flex flex-col md:flex-row'>
+                        <div className="w-full md:w-[40%]">
+                            <p className='text-[34px] md:text-[40px] font-[700] leading-[120%]'>Our Worldwide Network of Trusted Partners</p>
                             <p className='mt-[35px] text-[18px] leading-[150%]'>
                                 Each of these partners brings unique value, specialized expertise, and deep regional knowledge that helps us provide tailored solutions to our clients.
                             </p>
                         </div>
-                        <div className="w-[60%]">
+                        <div className="w-full md:w-[60%]">
                             <Partners />
                         </div>
                     </div>

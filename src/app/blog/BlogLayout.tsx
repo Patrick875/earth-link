@@ -6,7 +6,7 @@ const BlogLayout = () => {
     const latestPosts = blogPosts.slice(0, 4);
 
     return (
-        <div className="min-h-screen mt-[164px] bg-gray-50">
+        <div className="min-h-screen mt-[60px] md:mt-[164px] bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="flex flex-col lg:flex-row gap-8">
                     <main className="flex-1">
@@ -19,8 +19,8 @@ const BlogLayout = () => {
                                             alt={post.title}
                                             className="w-full h-48 object-cover"
                                         />
-                                        <div className="absolute top-4 left-4">
-                                            <span className={`${post.categoryColor} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                                        <div className="absolute -bottom-4 left-4 bg-[#EDF5F4] rounded-full">
+                                            <span className={`${post.categoryColor} font-semibold text-[#006D5B] px-3 py-1 rounded-full text-sm `}>
                                                 {post.category}
                                             </span>
                                         </div>
@@ -37,11 +37,11 @@ const BlogLayout = () => {
                                             {post.title}
                                         </h2>
                                         <div className="flex items-center text-sm text-gray-500 space-x-4">
-                                            <div className="flex items-center">
+                                            <div className="flex items-center text-[#006D5B] font-semibold">
                                                 <User className="h-4 w-4 mr-1" />
-                                                <span>by {post.author}</span>
+                                                <span >by {post.author}</span>
                                             </div>
-                                            <div className="flex items-center">
+                                            <div className="flex items-center text-[#006D5B] font-semibold">
                                                 <Calendar className="h-4 w-4 mr-1" />
                                                 <span>{post.date}</span>
                                             </div>

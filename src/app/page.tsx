@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <HeroSection>
-        <h1 className='text-[60px]  font-[700] leading-[120%]'>
+        <h1 className='text-[40px] md:text-[60px]  font-[700] leading-[120%]'>
           Expand Your Business Globally with <span className='text-[#19B32F]'>Confidence</span>
         </h1>
         <p className='text-[18px] font-[400] mt-[12px] leading-[150%]'>We provide comprehensive solutions to help companies overcome cross-border challenges navigate complex markets, and unlock global growth opportunities.</p>
@@ -27,7 +27,7 @@ export default function Home() {
           animate="show"
           className='mt-[100px]'>
           <div className="w-full text-center">
-            <h2 className='text-[40px] font-[700] leading-[120%]'>Our Global <span className='text-[#1986C3]'>Expansion Services</span></h2>
+            <h2 className='text-[34px] md:text-[40px] font-[700] leading-[120%]'>Our Global <span className='text-[#1986C3]'>Expansion Services</span></h2>
             <p className='mt-[32px] text-[#687588]'>See how EarthLink has grown and made a positive impact.</p>
           </div>
         </motion.section>
@@ -44,12 +44,12 @@ export default function Home() {
           variants={fadeInUpContainer}
           initial="hidden"
           animate="show"
-          className="mt-[100px] ">
+          className="mt-[60px] md:mt-[100px] ">
           <div className="w-[90%] mx-auto">
-            <div className="flex justify-between">
-              <div className="w-[40%] my-[54px]">
+            <div className="flex flex-col-reverse md:flex-row md:justify-between">
+              <div className="w-full md:w-[40%] my-[54px]">
                 <div>
-                  <h3 className='text-[40px] font-[700] leading-[120%] '>Why Choose</h3>
+                  <h3 className='text-[34px] md:text-[40px] font-[700] leading-[120%] '>Why Choose</h3>
                   <h3 className='text-[40px] font-[700] leading-[120%] text-[#1986C3]'>Earth Link Group</h3>
                 </div>
                 <p className='mt-[32px]'>
@@ -58,7 +58,7 @@ export default function Home() {
                 <div className='mt-[32px]'></div>
                 <button className='mt-[32px] font-[600] text-[16px] px-[24px] py-[21px] bg-[#19B32F] rounded-[6px] text-white'>Learn More</button>
               </div>
-              <div className="w-[40%] relative">
+              <div className="w-full md:w-[40%] h-[50vh] relative">
                 <Image
                   fill
                   src="/cards-image-1.png"
@@ -76,12 +76,12 @@ export default function Home() {
           animate="show"
           className='bg-[#1986C3] mt-[118px] w-full md:min-h-[60vh]'>
           <div className="w-[90%] mx-auto py-[100px]">
-            <div className="flex gap-6 text-white">
-              <div className="w-[40%] ">
+            <div className="flex flex-col-reverse md:flex-row gap-6 text-white">
+              <div className="w-full md:w-[40%] ">
                 <p className='text-[40px] font-[700] mb-[36px]'>African Market Expansion Strategy </p>
                 <ExpansionDetails />
               </div>
-              <div className="w-[60%] relative">
+              <div className="w-full md:w-[60%] relative h-[50vh] ">
                 <Image
                   fill
                   alt='word-map'
@@ -96,14 +96,14 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          <div className='w-[90%] mx-auto py-[126px] flex'>
-            <div className="w-[40%]">
-              <p className='text-[40px] font-[700] leading-[120%]'>Our Worldwide Network of Trusted Partners</p>
+          <div className='w-[90%] mx-auto py-[64px] md:py-[126px] flex flex-col md:flex-row'>
+            <div className="w-full md:w-[40%]">
+              <p className='text-[40px] font-[700] leading-[120%] text-center md:text-start'>Our Worldwide Network of Trusted Partners</p>
               <p className='mt-[35px] text-[18px]'>
                 Each of these partners brings unique value, specialized expertise, and deep regional knowledge that helps us provide tailored solutions to our clients.
               </p>
             </div>
-            <div className="w-[60%]">
+            <div className="w-full md:w-[60%]">
               <Partners />
             </div>
           </div>
@@ -114,8 +114,8 @@ export default function Home() {
           animate="show"
           className='bg-linear-tr from-[#084B70] to-[rgb(58,69,150,0.2)] text-white hero-section'>
           <div className='w-[90%] mx-auto py-[96px] flex flex-col gap-6 items-center'>
-            <p className='text-[40px] font-[700] leading-[120%]'>Ready to Expand Your Business Globally?</p>
-            <p className='mt-[35px] text-[18px]'>
+            <p className='text-[40px] font-[700] text-center md:text-start leading-[120%]'>Ready to Expand Your Business Globally?</p>
+            <p className='mt-[35px] text-[18px] text-center md:text-start'>
               Schedule a consultation with our global expansion experts and transform your international business strategy
             </p>
             <button className=" rounded-[8px] w-[224px] h-[56px]   text-white bg-[#19B32F]" >Contact us</button>

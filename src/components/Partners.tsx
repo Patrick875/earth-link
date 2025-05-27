@@ -4,7 +4,7 @@ import React from "react";
 
 function Partners() {
     return (
-        <div className="grid grid-cols-3">
+        <div className="grid  grid-cols-1 grid-cols-3">
             <div className="py-[40px] bg-white px-[22px]">
                 <div className="relative h-[30px] w-full">
                     <Image fill src="/logo.svg" alt="logo-det" className="block object-contain" />

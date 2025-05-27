@@ -83,7 +83,7 @@ export default function ContactForm() {
     return (
         <div className="overflow-x-hidden">
             <HeroSection>
-                <h1 className='text-[60px]  font-[700] leading-[120%]'>
+                <h1 className='text-[40px] md:text-[60px]  font-[700] leading-[120%]'>
                     Contact us
                 </h1>
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
@@ -92,7 +92,7 @@ export default function ContactForm() {
                     <Link href='/' className='block text-white'  >Contact us</Link>
                 </div>
             </HeroSection>
-            <section className=" mt-[110px] min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <section className=" mt-[30px] md:mt-[110px] min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="w-[90%] mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">

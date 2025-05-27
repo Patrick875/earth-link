@@ -10,7 +10,7 @@ import { MdOutlinePhone } from 'react-icons/md';
 
 const Footer: React.FC = () => (
     <footer>
-        <div className='w-[90%] mx-auto grid grid-cols-4 gap-4 py-[86px]'>
+        <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 py-[40px] md:py-[86px]'>
             <div className='col-span-1'>
                 <div className="h-fit w-14">
                     <Image
