@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, Calendar, User, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Search, Calendar, User, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaPlay } from "react-icons/fa";
 import { blogPosts, categories, popularTags } from '@/lib/constants';
 
 const BlogLayout = () => {
@@ -27,7 +28,7 @@ const BlogLayout = () => {
                                         {post.hasVideo && (
                                             <div className="absolute inset-0 flex items-center justify-center">
                                                 <button className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-3 transition-all duration-200">
-                                                    <Play className="h-6 w-6 text-blue-600 ml-1" />
+                                                    <FaPlay className="h-6 w-6 text-teal-600 ml-1" />
                                                 </button>
                                             </div>
                                         )}

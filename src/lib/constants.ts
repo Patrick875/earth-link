@@ -5,9 +5,14 @@ export const headers = [
 		id: "home",
 	},
 	{
-		title: "Book consultation",
-		link: "/book-consultation",
-		id: "book-consultation",
+		title: "Our services",
+		link: "#services",
+		id: "services",
+	},
+	{
+		title: "Our locations",
+		link: "",
+		id: "locations",
 	},
 	{
 		title: "Contact us",
@@ -243,3 +248,52 @@ export const fadeInUpContainer = {
 		},
 	},
 };
+export const locations = [
+	{
+		country: "Senegal",
+		description: "lorem ipsum",
+		icon: "fi fi-sn",
+	},
+	{
+		country: "Cameroon",
+		description: "lorem ipsum",
+		icon: "fi fi-cm",
+	},
+	{
+		country: "Zambia",
+		description: "lorem ipsum",
+		icon: "fi fi-zm",
+	},
+	{
+		country: "Central African Republic",
+		description: "lorem ipsum",
+		icon: "fi fi-cf",
+	},
+	{
+		country: "Malawi",
+		description: "lorem ipsum",
+		icon: "fi fi-mw",
+	},
+	{
+		country: "Republic of Congo",
+		description: "lorem ipsum",
+		icon: "fi fi-cg",
+	},
+	{
+		country: "Zimbabwe",
+		description: "lorem ipsum",
+		icon: "fi fi-zw",
+	},
+
+	{
+		country: "Rwanda",
+		description: "lorem ipsum",
+		icon: "fi fi-rw",
+	},
+
+	{
+		country: "South Sudan",
+		description: "lorem ipsum",
+		icon: "fi fi-ss",
+	},
+];

@@ -18,7 +18,7 @@ function HeroSection({ children }: Props) {
     return (
         <section
             className={cn(
-                isHome ? "md:min-h-[75vh] min-h-[40vh]" : "min-h-[30vh] md:min-h-[40vh]",
+                isHome ? "md:min-h-[100vh] min-h-[40vh]" : "min-h-[30vh] md:min-h-[40vh]",
                 "w-full flex flex-col bg-gradient-to-tr from-[#084B70] to-[rgba(58,69,150,0.2)] hero-section"
             )}
         >

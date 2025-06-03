@@ -3,11 +3,20 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { headers } from "../lib/constants";
-import { Menu, X } from "lucide-react";
+import { headers, locations } from "../lib/constants";
+import { ChevronDownIcon, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Host_Grotesk } from 'next/font/google'
+
+const hostGrotesk = Host_Grotesk({
+    variable: "--font-host",
+    subsets: ["latin"],
+});
+
 
 function HeaderNav() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showLocations, setShowLocations] = useState(false)
 
     // Disable body scroll when mobile menu is open
     useEffect(() => {
@@ -22,7 +31,7 @@ function HeaderNav() {
     }, [menuOpen]);
 
     return (
-        <header className="w-full text-white md:sticky md:top-0 md:z-50">
+        <header className={cn(hostGrotesk.className, "w-full text-white md:sticky md:top-0 md:z-50")}>
             <div className="w-[90%] mx-auto flex justify-between items-center py-4">
                 {/* Logo */}
                 <div className="h-fit w-14">
@@ -38,13 +47,36 @@ function HeaderNav() {
                 </div>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex w-2/6 items-center justify-between">
+                <nav className="hidden md:flex w-3/6 items-center justify-between relative">
                     {headers.map((item) => (
-                        <Link key={item.id} href={item.link} className="hover:text-green-400">
+                        <Link key={item.id} href={item.link} onClick={() => {
+                            if (item.id == 'locations') {
+                                setShowLocations(() => !showLocations)
+                            }
+                        }
+                        } className="flex gap-3 items-center  hover:text-green-400">
                             {item.title}
+                            {item.id == 'locations' && <ChevronDownIcon className={cn('h-4 w-4', showLocations && 'rotate-180')} />}
+
                         </Link>
                     ))}
                 </nav>
+
+                {showLocations && <div className='hidden md:flex flex-col  absolute  top-24 left-40 w-[80vw] min-h-[38vh] bg-white rounded-[12px]'>
+                    <div className="grid  grid-cols-3  h-[36vh] justify-between w-[90%] m-auto">
+                        {locations.map((el) =>
+                            <div key={el.country} className='flex gap-3 items-center text-black'>
+                                <div className='p-2 h-16 w-16 bg-sky-700/10 flex items-center justify-center rounded-full '>
+                                    <div className={cn(el.icon, 'h-14 w-14')} />
+                                </div>
+                                <div>
+                                    <p className='font-semibold '>{el.country}</p>
+                                    <p className=''>{el.description}</p>
+                                </div>
+                            </div>)}
+                    </div>
+
+                </div>}
 
                 {/* Desktop Contact Button */}
                 <div className="hidden md:block">

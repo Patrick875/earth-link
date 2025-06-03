@@ -9,7 +9,7 @@ import { fadeInUpContainer, } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden scroll-smooth">
       <HeroSection>
         <h1 className='text-[40px] md:text-[60px]  font-[700] leading-[120%]'>
           Expand Your Business Globally with <span className='text-[#19B32F]'>Confidence</span>
@@ -25,6 +25,7 @@ export default function Home() {
           variants={fadeInUpContainer}
           initial="hidden"
           animate="show"
+          id='services'
           className='mt-[100px]'>
           <div className="w-full text-center">
             <h2 className='text-[34px] md:text-[40px] font-[700] leading-[120%]'>Our Global <span className='text-[#1986C3]'>Expansion Services</span></h2>

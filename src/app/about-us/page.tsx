@@ -56,13 +56,13 @@ export default function AboutUs() {
                 <section className='mt-[60px] md:mt-[126px] min-h-[50vh] flex flex-col'>
                     <div className='w-[90%] mx-auto flex flex-col md:flex-row gap-6 flex-1'>
                         <div className='hidden md:flex gap-2 w-full md:w-1/2 '>
-                            <div className="flex w-full ">
-                                <div className=' relative w-[60%] rounded-[8px] '>
+                            <div className="flex w-full gap-4">
+                                <div className=' relative w-[60%] h-[534px] rounded-[8px] '>
                                     <Image
                                         fill
                                         alt='about-us-1'
                                         src='/about-us-1.png'
-                                        className='h-full object-contain'
+                                        className='h-full w-full rounded-[8px]'
                                     />
                                 </div>
                                 <div className=" w-[40%] flex flex-col gap-3">
@@ -104,20 +104,20 @@ export default function AboutUs() {
                     </div>
                 </section>
                 <section className='mt-[126px] min-h-[60vh] flex flex-col'>
-                    <div className='w-[90%] mx-auto flex-1 flex flex-col-reverse md:flex-row gap-4 '>
+                    <div className='w-[90%] mx-auto flex-1 flex flex-col-reverse md:flex-row gap-4 md:gap-24'>
                         <div className='w-full md:w-1/2 mt-[32px]'>
-                            <h2 className='text-[34px] md:text-[40px] font-[700] leading-[120%] '>
-                                <p> Why Choose</p>
-                                <p className='text-[#1986C3]'>
-                                    Earth Link Group
-                                </p>
+                            <div className='flex justify-center md:justify-start '>
+                                <p className='py-[10px] px-[32px] bg-[#F2F2F2] rounded-[14px] text-[#5C6265]'>WHY WE ARE THE BEST</p>
+                            </div>
+                            <h2 className='text-[34px] mt-[14px]  md:text-[40px] font-[700] leading-[120%] '>
+                                <p>Why You Should Choose Our Finance & Business Policy</p>
                             </h2>
                             <p className='mt-[32px] text-[18px] leading-[150%]'>
-                                From market entry strategies and regulatory compliance to local operations support and strategic partnerships, we provide end-to-end services that simplify international business. Our approach is guided by deep local knowledge, global perspective, and a commitment to delivering measurable impact.
+                                SawaPay is your trusted financial partner, offering innovative solutions tailored to your business needs. Discover why countless businesses rely on SawaPay for their payroll and finance management.
                             </p>
                             <div className='mt-[68px] grid grid-cols-2 gap-4'>
                                 {whys.map((item, index) => <div key={index + item} className='col-span-1 flex items-center gap-3'>
-                                    <IoCheckmarkCircle className="text-[#1986C3]" />
+                                    <IoCheckmarkCircle className="text-emerald-600 " size={28} />
                                     {item}
                                 </div>)}
                             </div>
@@ -185,19 +185,19 @@ export default function AboutUs() {
 
                         <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
                             {team.map((member) =>
-                            (<div key={member.id} className="col-span-1 bg-white rounded-[20px] shadow-lg overflow-hidden">
+                            (<div key={member.id} className="col-span-1 p-2 bg-white rounded-[20px] shadow-lg overflow-hidden">
                                 {/* Image Section */}
-                                <div className="relative h-[280px]  rounded-t-[20px]">
+                                <div className="relative h-[380px]  rounded-t-[20px]">
                                     <Image
                                         fill
                                         alt={member.name}
                                         src={member.profilePic}
-                                        className="object-contain md:object-cover"
+                                        className="object-cover rounded-[8px]"
                                     />
                                 </div>
 
                                 {/* White Card Section - Overlapping */}
-                                <div className="bg-white rounded-t-[20px] -mt-6 relative z-10 px-6 pt-8 pb-6">
+                                <div className="bg-white rounded-t-[20px] w-[90%] -mt-6 relative z-10 px-6 pt-8 pb-6">
                                     <h4 className="text-[24px] font-bold text-black mb-2">{member.name}</h4>
                                     <p className="text-[16px]  font-medium mb-6 text-[#89C550]">{member.title}</p>
 
@@ -295,7 +295,7 @@ export default function AboutUs() {
                                 Each of these partners brings unique value, specialized expertise, and deep regional knowledge that helps us provide tailored solutions to our clients.
                             </p>
                         </div>
-                        <div className="w-full md:w-[60%]">
+                        <div className="w-full md:w-[60%] bg-white">
                             <Partners />
                         </div>
                     </div>
