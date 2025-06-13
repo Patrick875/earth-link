@@ -7,11 +7,12 @@ const BlogLayout = () => {
     const latestPosts = blogPosts.slice(0, 4);
 
     return (
-        <div className="min-h-screen mt-[60px] md:mt-[164px] bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="flex flex-col lg:flex-row gap-8">
+        <section className=" w-[90%] mx-auto">
+        <div className="min-h-screen mt-[68px]">
+            <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="flex flex-col lg:flex-row gap-16">
                     <main className="flex-1">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 ">
                             {blogPosts.map((post) => (
                                 <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div className="relative">
@@ -141,6 +142,7 @@ const BlogLayout = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

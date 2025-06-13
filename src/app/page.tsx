@@ -13,36 +13,37 @@ import { cn } from "@/lib/utils";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
-import { team, testimonials, whys } from "@/lib/constants";
+import { testimonials } from "@/lib/constants";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
 
-    const [api, setApi] = useState<CarouselApi>()
-    const [current, setCurrent] = useState(0)
-    const [count, setCount] = useState(0)
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-    useEffect(() => {
-        if (!api) {
-            return
-        }
-
-        setCount(api.scrollSnapList().length)
-        setCurrent(api.selectedScrollSnap() + 1)
-
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1)
-        })
-    }, [api])
-
-    const renderStars = (rating: number) => {
-        return Array.from({ length: 5 }, (_, i) => (
-            <Star
-                key={i}
-                className={`w-5 h-5 ${i < rating ? "fill-[#89C550] text-[#89C550]" : "fill-gray-200 text-gray-200"}`}
-            />
-        ))
+  useEffect(() => {
+    if (!api) {
+      return
     }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <Star
+        key={i}
+        className={`w-5 h-5 ${i < rating ? "fill-[#89C550] text-[#89C550]" : "fill-gray-200 text-gray-200"}`}
+      />
+    ))
+  }
 
   return (
     <div className="overflow-x-hidden scroll-smooth bg-[#FBFBFB]">
@@ -58,10 +59,15 @@ export default function Home() {
           />
 
         </h1>
-        <p className='text-[18px] font-[400] mt-[12px] leading-[150%]'>We provide comprehensive solutions to help companies overcome cross-border challenges navigate complex markets, and unlock global growth opportunities.</p>
+        <p className='text-[18px] font-[400] mt-[12px] leading-[150%]'>EarthLink Business is your strategic partner in international business expansion. We provide comprehensive solutions to help companies overcome cross-border challenges, navigate complex markets, and unlock global growth opportunities.</p>
         <div className=" mt-[46px] flex gap-4 items-center">
-          <button className='rounded-[6px] bg-[#19B32F] py-[21px] px-[24px] w-[207px] text-white'>Book consultation</button>
-          <button className='rounded-[6px] text-white py-[21px] px-[24px] w-[207px] border-white border-[1.4px]'
+          <button
+            className='rounded-[6px] bg-[#19B32F] py-[21px] px-[24px] w-[207px] text-white hover:bg-[#19B32F]/90'
+            onClick={() => window.open('https://calendly.com/', '_blank')}
+          >
+            Book consultation
+          </button>
+          <button className='rounded-[6px] text-white py-[21px] px-[24px] w-[207px] border-white border-[1.4px] hover:bg-[#19B32F]/10 hover:border-[#19B32F]'
             onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById('services');
@@ -121,12 +127,12 @@ export default function Home() {
                   </div>
 
                 </div>
-                <button className='mt-[32px] font-[600] text-[16px] px-[24px] py-[16px] bg-[#19B32F] rounded-[6px] text-white'>Learn More</button>
+                {/* <button className='mt-[32px] font-[600] text-[16px] px-[24px] py-[16px] bg-[#19B32F] rounded-[6px] text-white'>Learn More</button> */}
               </div>
               <div className="w-full md:w-[40%] h-[50vh] relative">
                 <Image
                   fill
-                  src="/cards-image-1.png"
+                  src="/about-us.jpg"
                   alt='business-setup'
                   className='block object-cover'
                 />
@@ -143,7 +149,7 @@ export default function Home() {
           <div className="w-[90%] mx-auto py-[100px]">
             <div className="flex flex-col-reverse md:flex-row gap-6 text-white">
               <div className="w-full md:w-[40%] ">
-                <p className='text-[40px] font-[700] mb-[36px]'>African Market Expansion Strategy </p>
+                <p className='text-[40px] font-[700] mb-[36px]'>African Market Expansion Strategy and Economic Impact</p>
                 <ExpansionDetails />
               </div>
               <div className="w-full md:w-[60%] relative h-[50vh] ">
@@ -186,17 +192,22 @@ export default function Home() {
               <h1 className="text-[#03192E] text-[40px] font-[700] text-center"> Our Business Expansion Across Africa</h1>
             </div>
             <div className="">
-              <div className="grid grid-cols-5">
-                {locations.map((el) =>
-                  <div key={el.country} className='flex gap-4 items-center text-black bg-white m-4 p-2'>
-                    <div className='p-2 h-16 w-16 bg-sky-700/10 flex items-center justify-center rounded-full '>
-                      <div className={cn(el.icon, 'h-14 w-14')} />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {locations.map((el) => (
+                  <div
+                    key={el.country}
+                    className="flex gap-4 items-center text-black bg-white p-2 mt-2 mb-2 rounded-lg shadow-sm hover:cursor-pointer"
+                  >
+                    <div className="p-3 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full">
+                      <div className={cn(el.icon, "h-14 w-14")} />
                     </div>
-                    <div>
-                      <p className='font-semibold '>{el.country}</p>
-                      <p className=''>{el.description}</p>
+
+                    <div className="flex flex-col">
+                      <p className="font-semibold">{el.country}</p>
+                      <p className="text-xs text-gray-400">{el.description}</p>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -273,7 +284,9 @@ export default function Home() {
             <p className='mt-[35px] text-[18px] text-center md:text-start'>
               Schedule a consultation with our global expansion experts and transform your international business strategy
             </p>
-            <button className=" rounded-[8px] w-[224px] h-[56px]   text-white bg-[#19B32F]" >Contact us</button>
+            <Link href="/contact-us" >
+              <button className=" rounded-[8px] w-[224px] h-[56px]  bg-[#19B32F]  text-white hover:bg-[#19B32F]/90">Contact us</button>
+            </Link>
           </div>
         </motion.section>
       </main>

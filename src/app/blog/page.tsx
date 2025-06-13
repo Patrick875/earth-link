@@ -17,7 +17,7 @@ function page() {
                 </div>
             </HeroSection>
             <section>
-                <div className="w-[90/%] mx-auto">
+                <div className="">
                     <BlogLayout />
                 </div>
             </section>

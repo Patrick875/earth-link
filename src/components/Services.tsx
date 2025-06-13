@@ -2,49 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { PiArrowSquareOutThin } from "react-icons/pi";
-
-const services = [
-    {
-        id: 'registration',
-        title: 'Company registration',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-    },
-    {
-        id: 'advisory',
-        title: 'Corporate advisory services',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-
-    },
-    {
-        id: 'support',
-        title: 'Business support services',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-
-    },
-    {
-        id: 'partnerships',
-        title: 'Strategic partnerships',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-
-    },
-    {
-        id: 'investment',
-        title: 'Financial and investment services',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-
-    },
-    {
-        id: 'tour',
-        title: 'Business tour services',
-        description: 'Develop tailored strategies for entering new international dsfsd',
-        cardImage: '/cards-image-1.png'
-    }
-]
+import { services } from '@/lib/constants'
 
 function Services() {
     return (

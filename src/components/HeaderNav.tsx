@@ -79,13 +79,13 @@ function HeaderNav() {
                 {showLocations && <div className='hidden md:flex flex-col  absolute  top-24 left-40 w-[80vw] min-h-[38vh] bg-white rounded-[12px]'>
                     <div className="grid  grid-cols-3  h-[36vh] justify-between w-[90%] m-auto">
                         {locations.map((el) =>
-                            <div key={el.country} className='flex gap-3 items-center text-black'>
-                                <div className='p-2 h-16 w-16 bg-sky-700/10 flex items-center justify-center rounded-full '>
+                            <div key={el.country} className='flex gap-4 items-center text-black'>
+                                <div className='p-3 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full'>
                                     <div className={cn(el.icon, 'h-14 w-14')} />
                                 </div>
                                 <div>
                                     <p className='font-semibold '>{el.country}</p>
-                                    <p className=''>{el.description}</p>
+                                    <p className='text-xs text-gray-400'>{el.description}</p>
                                 </div>
                             </div>)}
                     </div>
@@ -94,9 +94,11 @@ function HeaderNav() {
 
                 {/* Desktop Contact Button */}
                 <div className="hidden md:block">
-                    <button className="px-6 rounded-[8px] w-[156px] h-[48px] bg-[#19B32F] hover:bg-green-600">
-                        Contact us
-                    </button>
+                    <Link href='/contact-us'>
+                        <button className="rounded-[6px] bg-[#19B32F] py-[16px] px-[8px] w-[207px] text-white hover:bg-[#19B32F]/90">
+                            Contact us
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -141,7 +143,7 @@ function HeaderNav() {
                         ))}
                         <button
                             onClick={() => setMenuOpen(false)}
-                            className="mt-4 px-4 py-2 rounded-[8px] bg-[#19B32F] text-white hover:bg-green-600"
+                            className="mt-4 px-4 py-2 rounded-[8px] bg-[#19B32F]  text-white hover:bg-[#19B32F]/90"
                         >
                             Contact us
                         </button>

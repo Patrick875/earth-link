@@ -25,18 +25,18 @@ const Footer: React.FC = () => (
                 </div>
                 <p className='mt-[16px] text-[18px] w-[316px] font-[400]'>Earhtlink is a trusted financial partner, offering innovative solutions tailored to your business needs.</p>
                 <div className='mt-[26px] flex gap-4'>
-                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white">
+                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white hover:bg-[#19B32F]/90">
                         <TiSocialFacebook className='text-[18px]' />
                     </div>
-                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white">
+                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white hover:bg-[#19B32F]/90">
                         <FaGooglePlusG className='text-[18px]' />
 
                     </div>
-                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white">
+                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white hover:bg-[#19B32F]/90">
                         <TiSocialLinkedin className='text-[18px]' />
 
                     </div>
-                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white">
+                    <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#19B32F] rounded-full text-white hover:bg-[#19B32F]/90">
                         <FaYoutube className='text-[18px]' />
                     </div>
                 </div>
@@ -44,13 +44,13 @@ const Footer: React.FC = () => (
             <div className='col-span-1'>
                 <p className='text-[24px]'>Quick Links</p>
                 <div className='mt-[16px] flex flex-col gap-4 font-[400]'>
-                    {headers.map((item) => <Link key={item.id} href={item.link} className='block'  >{item.title}</Link>)}
+                    {headers.map((item) => <Link key={item.id} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</Link>)}
                 </div>
             </div>
             <div className='col-span-1'>
                 <p className='text-[24px]'>Company</p>
                 <div className='mt-[16px] flex flex-col gap-4 font-[400]'>
-                    {companyHeaders.map((item, index) => <Link key={item.id + index} href={item.link} className='block'  >{item.title}</Link>)}
+                    {companyHeaders.map((item, index) => <Link key={item.id + index} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</Link>)}
                 </div>
             </div>
             <div className='col-span-1'>

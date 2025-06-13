@@ -87,12 +87,12 @@ export default function ContactForm() {
                     Contact us
                 </h1>
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
-                    <Link href='/' className='block text-white'  >Home</Link>
+                    <Link href='/' className='block text-white'>Home</Link>
                     <IoChevronForward className='block text-white' />
-                    <Link href='/' className='block text-white'  >Contact us</Link>
+                    <Link href='/contact-us' className='block text-white'>Contact us</Link>
                 </div>
             </HeroSection>
-            <section className=" mt-[30px] md:mt-[110px] min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
+            <section className=" mt-[30px]  min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
                 <div className="w-[90%] mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         <div className="bg-white rounded-2xl p-8 lg:p-12">

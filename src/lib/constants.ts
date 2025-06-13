@@ -32,53 +32,23 @@ export const headers = [
 ];
 export const team = [
 	{
-		name: "Jenny Wilson",
+		name: "Vianney",
 		title: "CEO & Founder",
 		id: "jenny",
-		profilePic: "/team-1.png",
+		profilePic: "/ceo.e519777893be1e8470bc.jpg",
 	},
 	{
-		name: "Guy Hawkins",
-		title: "Business Analysis",
+		name: "Michael Chen",
+		title: "Chief Strategy Officer",
 		id: "guy",
-		profilePic: "/team-2.png",
+		profilePic: "/seo.89e1c63731a48bd8ad96.jpg",
 	},
 	{
-		name: "Jack Manzi",
-		title: "Marketing Advisor",
+		name: "Sarah Thompson",
+		title: "Head of Global Partnerships",
 		id: "jack",
-		profilePic: "/team-3.png",
-	},
-	{
-		name: "Paradis Maurine",
-		title: "Finance Director",
-		id: "paradis",
-		profilePic: "/team-4.png",
-	},
-	{
-		name: "Mary Hawkins",
-		title: "Business Analysis",
-		id: "mary",
-		profilePic: "/team-5.png",
-	},
-	{
-		name: "Jenny Wilson",
-		title: "Marketing Advisor",
-		id: "marketing",
-		profilePic: "/team-6.png",
-	},
-	{
-		name: "Alida Raules",
-		title: "Finance Director",
-		id: "finance",
-		profilePic: "/team-7.png",
-	},
-	{
-		name: "Robert Fox",
-		title: "Relationship Manager",
-		id: "robert",
-		profilePic: "/team-8.png",
-	},
+		profilePic: "/emily.5bf04170eab15b6313c2.jpg",
+	}
 ];
 export const companyHeaders = [
 	{
@@ -99,7 +69,7 @@ export const companyHeaders = [
 ];
 export const officeInfo = {
 	email: "info@eathlingroup.com",
-	location: "89 KG 14 Ave, Kigali",
+	location: "3355+79M CHIC Building, 1st Floor E046A2, Kigali",
 	phone: "+250 788 447 599",
 };
 export const whys = ["Security and Privacy", "Expert Support", "Scalability and Flexibility", "Cost-Effective Solutions"];
@@ -108,43 +78,27 @@ export const testimonials = [
 	{
 		id: 1,
 		rating: 5,
-		quote: "Thanks to EarthLink Finance, I was able to get a salary advance when I needed it most. The process was quick and hassle-free",
-		name: "Hilaire S",
-		title: "Product Designer, Kigali",
-		avatar: "/test-1.jpg?height=60&width=60",
+		quote: "EarthLink Business transformed our international expansion strategy. Their comprehensive market research and strategic insights enabled us to successfully enter three new markets with minimal risk and maximum efficiency.",
+		name: "Sarah Thompson",
+		title: "CEO, Tech Innovations Inc. San Francisco, USA",
+		avatar: "/sarah.a410cfd01622338628ae.jpg?height=60&width=60",
 	},
 	{
 		id: 2,
-		rating: 5,
-		quote: "The Buy Now, Pay Later feature allowed me to get the equipment I needed for my startup without breaking the bank. Highly recommended!",
-		name: "Sarah L",
+		rating: 4,
+		quote: "The cross-border consulting from EarthLink was a game-changer. They provided nuanced guidance that addressed our complex regulatory challenges and helped us optimize our international supply chain strategy.",
+		name: "Miguel Rodriguez",
 		title: "Founder, DigitalCrafts",
-		avatar: "/test-2.png?height=60&width=60",
+		avatar: "/miguel.jpg?height=60&width=60",
 	},
 	{
 		id: 3,
 		rating: 5,
-		quote: "EarthLink Finance's saving tools have helped me reach my financial goals faster. The AI credit score feature is a game-changer!",
-		name: "Emmanuel K",
-		title: "Consultant, Nairobi",
-		avatar: "/test-2.png?height=60&width=60",
-	},
-	{
-		id: 4,
-		rating: 5,
-		quote: "EarthLink Finance's saving tools have helped me reach my financial goals faster. The AI credit score feature is a game-changer!",
-		name: "Jane K",
-		title: "Consultant, Nairobi",
-		avatar: "/test-2.png?height=60&width=60",
-	},
-	{
-		id: 5,
-		rating: 5,
-		quote: "EarthLink Finance's saving tools have helped me reach my financial goals faster. The AI credit score feature is a game-changer!",
-		name: "John K",
-		title: "Consultant, Nairobi",
-		avatar: "/test-2.png?height=60&width=60",
-	},
+		quote: "EarthLink's strategic partnership network was instrumental in our global expansion. Their deep understanding of international markets and connections opened doors we never thought possible, accelerating our growth exponentially.",
+		name: "Emily Chen",
+		title: "Founder, E-commerce Enterprises. Singapore",
+		avatar: "/emily.5bf04170eab15b6313c2.jpg?height=60&width=60",
+	}
 ];
 
 export const blogPosts = [
@@ -212,7 +166,9 @@ export const categories = [
 	{ name: "Real Data Analysis", count: 1 },
 	{ name: "Target Audience", count: 1 },
 ];
+
 export const popularTags = ["Banking", "Data Analysis", "Finance", "Finance Advisor", "Investment", "Security", "Tax Consultancy"];
+
 export const fadeInUp = {
 	hidden: { opacity: 0, y: 40 },
 	show: {
@@ -248,52 +204,119 @@ export const fadeInUpContainer = {
 		},
 	},
 };
+
 export const locations = [
 	{
 		country: "Senegal",
-		description: "lorem ipsum",
+		description: "A strategic West African market with a growing digital economy and stable business environment.",
 		icon: "fi fi-sn",
 	},
 	{
-		country: "Cameroon",
-		description: "lorem ipsum",
-		icon: "fi fi-cm",
+		country: "Tanzaia",
+		description: "East African powerhouse with significant digital growth potential and diverse market opportunities.",
+		icon: "fi fi-tz",
+	},
+	{
+		country: "Angola",
+		description: "Resource-rich nation with growing focus on digital transformation and economic diversification.",
+		icon: "fi fi-ao",
+	},
+	{
+		country: "Mozambique",
+		description: "Emerging market with significant potential in digital services and infrastructure development.",
+		icon: "fi fi-mz",
 	},
 	{
 		country: "Zambia",
-		description: "lorem ipsum",
+		description: "Central African nation with growing tech adoption and digital transformation initiatives.",
 		icon: "fi fi-zm",
 	},
 	{
-		country: "Central African Republic",
-		description: "lorem ipsum",
-		icon: "fi fi-cf",
+		country: "Liberia",
+		description: "Emerging West African market with growing potential for digital transformation.",
+		icon: "fi fi-lr",
 	},
 	{
-		country: "Malawi",
-		description: "lorem ipsum",
-		icon: "fi fi-mw",
-	},
-	{
-		country: "Republic of Congo",
-		description: "lorem ipsum",
-		icon: "fi fi-cg",
-	},
-	{
-		country: "Zimbabwe",
-		description: "lorem ipsum",
-		icon: "fi fi-zw",
+		country: "Gabon",
+		description: "Resource-rich nation pursuing digital transformation and economic diversification.",
+		icon: "fi fi-ga",
 	},
 
 	{
 		country: "Rwanda",
-		description: "lorem ipsum",
+		description: "A leading African tech hub known for its rapid digital transformation and innovation-friendly environment.",
 		icon: "fi fi-rw",
-	},
-
-	{
-		country: "South Sudan",
-		description: "lorem ipsum",
-		icon: "fi fi-ss",
-	},
+	}
 ];
+
+export const services = [
+	    {
+        id: 'registration',
+        title: 'Company formation/registration',
+        description: 'We simplify the complexities of setting up a business in new markets, ensuring a smooth registration process, regulatory compliance, and structured corporate governance.',
+        cardImage: '/registration.jpg'
+    },
+    {
+        id: 'advisory',
+        title: 'Corporate advisory services',
+        description: 'We provide expert advisory solutions to support international business expansion, ensuring compliance, efficiency, and strategic business growth.',
+        cardImage: '/service.jpg'
+
+    },
+    {
+        id: 'support',
+        title: 'Business support services',
+        description: 'Our business support solutions enhance efficiency and competitiveness, enabling companies to successfully focus on their core operation and enter new markets.',
+        cardImage: '/business.jpg'
+
+    },
+    {
+        id: 'partnerships',
+        title: 'Strategic partnerships',
+        description: 'We facilitate high-value connections between businesses, government entities, and industry leaders, fostering strategic collaborations that drive growth and market expansion.',
+        cardImage: '/strategy.jpg'
+
+    },
+    {
+        id: 'investment',
+        title: 'Financial and investment services',
+        description: 'Our expert financial services provide businesses with the stability and insights needed to optimize resources, manage risks, and drive long-term profitability in dynamic global markets.',
+        cardImage: '/financial.jpg'
+
+    },
+    {
+        id: 'tour',
+        title: 'Business tour services',
+        description: 'We curate seamless business travel experiences, handling logistics, documentation, and planning to help professionals explore new opportunities with ease and confidence.',
+        cardImage: '/tour.jpg'
+    }
+];
+
+export const expansions = [
+    {
+        id: 'total',
+        numerical: '322M',
+		target: 16,
+        title: 'West Africa',
+    },
+    {
+        id: 'total-2',
+        numerical: '480M',
+		target: 18,
+        title: 'East Africa',
+    },
+    {
+        id: 'funding-2',
+        numerical: '620M',
+		target: 5,
+        title: 'Southern Africa',
+
+    },
+    {
+        id: 'round',
+        numerical: '510M',
+		target: 9,
+        title: 'Central Africa',
+    },
+
+]
