@@ -117,7 +117,7 @@ function HeaderNav() {
                     <div className="flex justify-between">
                         <div className="h-fit w-32">
                             <Image
-                                src="/logo.png"
+                                src="/logo-dark-blue.png"
                                 alt="Logo"
                                 width={160}
                                 height={30}
