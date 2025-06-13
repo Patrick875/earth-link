@@ -92,16 +92,18 @@ export default function ContactForm() {
                     <Link href='/' className='block text-white'  >Contact us</Link>
                 </div>
             </HeroSection>
-            <section className=" mt-[30px] md:mt-[110px] min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <section className=" mt-[30px] md:mt-[110px] min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
                 <div className="w-[90%] mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                        <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                        <div className="bg-white rounded-2xl p-8 lg:p-12">
                             <div className="mb-8">
-                                <h1 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+                                <h1 className=" text-[40px] font-light text-gray-900">
                                     Let&apos;s Expand Your
-                                    <span className="text-[#1986C3] font-semibold">Business Together</span>
                                 </h1>
-                                <p className="text-lg text-gray-600 leading-relaxed">
+                                <h1>
+                                    <span className="text-[#1986C3] text-[40px] font-semibold"> Business Together</span>
+                                </h1>
+                                <p className="text-[18px] text-[#687588] font-[400] pt-6 leading-relaxed">
                                     Connect with our global expansion experts and transform your
                                     international business strategy
                                 </p>
@@ -121,7 +123,7 @@ export default function ContactForm() {
                                             onChange={handleInputChange}
                                             placeholder="First Name"
                                             required
-                                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
+                                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
                                         />
                                     </div>
                                     <div>
@@ -136,7 +138,7 @@ export default function ContactForm() {
                                             onChange={handleInputChange}
                                             placeholder="your.email@company.com"
                                             required
-                                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
+                                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
                                         />
                                     </div>
                                 </div>
@@ -154,7 +156,7 @@ export default function ContactForm() {
                                             onChange={handleInputChange}
                                             placeholder="+1 (555) 123-4567"
                                             required
-                                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
+                                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
                                         />
                                     </div>
                                     <div>
@@ -167,7 +169,7 @@ export default function ContactForm() {
                                             value={formData.service}
                                             onChange={handleInputChange}
                                             required
-                                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
+                                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
                                         >
                                             <option value="">Select a service</option>
                                             <option value="market-entry">Market Entry Strategy</option>
@@ -190,7 +192,7 @@ export default function ContactForm() {
                                         onChange={handleInputChange}
                                         rows={5}
                                         placeholder="Tell us about your business expansion goals and how we can help you succeed globally..."
-                                        className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300 resize-vertical"
+                                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300 resize-vertical"
                                     />
                                 </div>
 
@@ -210,7 +212,7 @@ export default function ContactForm() {
                                 return (
                                     <div
                                         key={index}
-                                        className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                        className="bg-[#314AFF08]/5 rounded-sm p-6 hover:shadow-sm transition-all duration-300 hover:-translate-y-1"
                                     >
                                         <div className="flex items-start space-x-4">
                                             <div className="flex-shrink-0">
@@ -219,10 +221,10 @@ export default function ContactForm() {
                                                 </div>
                                             </div>
                                             <div>
-                                                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                                                <h3 className="text-[20px] font-semibold text-gray-900 mb-1">
                                                     {item.title}
                                                 </h3>
-                                                <p className="text-gray-600 whitespace-pre-line">
+                                                <p className="text-gray-600 text-[16px] whitespace-pre-line">
                                                     {item.info}
                                                 </p>
                                             </div>

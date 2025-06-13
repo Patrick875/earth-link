@@ -31,15 +31,15 @@ function HeaderNav() {
     }, [menuOpen]);
 
     return (
-        <header className={cn(hostGrotesk.className, "w-full text-white md:sticky md:top-0 md:z-50")}>
-            <div className="w-[90%] mx-auto flex justify-between items-center py-4">
+        <header className={cn(hostGrotesk.className, "w-full text-white sticky md:top-0 md:z-50")}>
+            <div className="w-[90%] mx-auto flex justify-between items-center ">
                 {/* Logo */}
-                <div className="h-fit w-14">
+                <div className="h-fit w-32">
                     <Image
                         src="/logo.png"
                         alt="Logo"
-                        width={60}
-                        height={10}
+                        width={120}
+                        height={30}
                         layout="responsive"
                         priority
                         className="object-cover"
@@ -49,15 +49,25 @@ function HeaderNav() {
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex w-3/6 items-center justify-between relative">
                     {headers.map((item) => (
-                        <Link key={item.id} href={item.link} onClick={() => {
-                            if (item.id == 'locations') {
-                                setShowLocations(() => !showLocations)
-                            }
-                        }
-                        } className="flex gap-3 items-center  hover:text-green-400">
+                        <Link
+                            key={item.id}
+                            href={item.link}
+                            onClick={(e) => {
+                                e.preventDefault(); // Prevent default navigation
+                                const target = document.getElementById(item.id);
+                                if (target) {
+                                    target.scrollIntoView({ behavior: "smooth" });
+                                }
+                                if (item.id === "locations") {
+                                    setShowLocations((prev) => !prev);
+                                }
+                            }}
+                            className="flex gap-3 items-center hover:text-green-400"
+                        >
                             {item.title}
-                            {item.id == 'locations' && <ChevronDownIcon className={cn('h-4 w-4', showLocations && 'rotate-180')} />}
-
+                            {item.id === "locations" && (
+                                <ChevronDownIcon className={cn("h-4 w-4", showLocations && "rotate-180")} />
+                            )}
                         </Link>
                     ))}
                 </nav>
@@ -99,12 +109,12 @@ function HeaderNav() {
             {menuOpen && (
                 <div className="fixed top-0 left-0 z-[9999] bg-white text-sky-700 min-h-screen w-full px-6 pt-4 pb-4">
                     <div className="flex justify-between">
-                        <div className="h-fit w-14">
+                        <div className="h-fit w-32">
                             <Image
                                 src="/logo.png"
                                 alt="Logo"
-                                width={60}
-                                height={10}
+                                width={160}
+                                height={30}
                                 layout="responsive"
                                 priority
                                 className="object-cover"
