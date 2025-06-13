@@ -60,14 +60,15 @@ export default function Home() {
 
         </h1>
         <p className='text-[18px] font-[400] mt-[12px] leading-[150%]'>EarthLink Business is your strategic partner in international business expansion. We provide comprehensive solutions to help companies overcome cross-border challenges, navigate complex markets, and unlock global growth opportunities.</p>
-        <div className=" mt-[46px] flex gap-4 items-center">
+        <div className="mt-[46px] flex flex-col gap-4 items-center sm:flex-row sm:gap-4">
           <button
-            className='rounded-[6px] bg-[#19B32F] py-[21px] px-[24px] w-[207px] text-white hover:bg-[#19B32F]/90'
+            className='rounded-[6px] bg-[#19B32F] py-[16px] px-[18px] w-full sm:w-[207px] text-white hover:bg-[#19B32F]/90'
             onClick={() => window.open('https://calendly.com/', '_blank')}
           >
             Book consultation
           </button>
-          <button className='rounded-[6px] text-white py-[21px] px-[24px] w-[207px] border-white border-[1.4px] hover:bg-[#19B32F]/10 hover:border-[#19B32F]'
+          <button
+            className='rounded-[6px] text-white py-[16px] px-[18px] w-full sm:w-[207px] border-white border-[1.4px] hover:bg-[#19B32F]/10 hover:border-[#19B32F]'
             onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById('services');
@@ -75,7 +76,9 @@ export default function Home() {
                 target.scrollIntoView({ behavior: "smooth" });
               }
             }}
-          >Our service</button>
+          >
+            Our service
+          </button>
         </div>
       </HeroSection>
       <main className="bg-[#FAFAFA] ">
