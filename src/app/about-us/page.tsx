@@ -1,44 +1,15 @@
 'use client'
 import HeroSection from "@/components/HeroSection";
-import Partners from "@/components/Partners";
-import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { team, testimonials, whys } from "@/lib/constants";
-import { Star } from "lucide-react";
+import { team } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { CiMedal } from "react-icons/ci";
-import { IoCheckmarkCircle, IoChevronForward } from "react-icons/io5";
+import { IoChevronForward } from "react-icons/io5";
 import { SlLike } from "react-icons/sl";
 
 
 export default function AboutUs() {
-    const [api, setApi] = useState<CarouselApi>()
-    const [current, setCurrent] = useState(0)
-    const [count, setCount] = useState(0)
 
-    useEffect(() => {
-        if (!api) {
-            return
-        }
-
-        setCount(api.scrollSnapList().length)
-        setCurrent(api.selectedScrollSnap() + 1)
-
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1)
-        })
-    }, [api])
-
-    const renderStars = (rating: number) => {
-        return Array.from({ length: 5 }, (_, i) => (
-            <Star
-                key={i}
-                className={`w-5 h-5 ${i < rating ? "fill-green-500 text-green-500" : "fill-gray-200 text-gray-200"}`}
-            />
-        ))
-    }
     return (
         <div className="overflow-x-hidden">
             <HeroSection>
