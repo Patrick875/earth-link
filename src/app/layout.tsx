@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.className}  antialiased`}
+        className={`${manrope.className}  antialiased text-[#687588]`}
       >
         {children}
         <Footer />

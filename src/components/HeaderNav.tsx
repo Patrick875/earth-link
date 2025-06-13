@@ -35,15 +35,17 @@ function HeaderNav() {
             <div className="w-[90%] mx-auto flex justify-between items-center ">
                 {/* Logo */}
                 <div className="h-fit w-32">
-                    <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        width={120}
-                        height={30}
-                        layout="responsive"
-                        priority
-                        className="object-cover"
-                    />
+                    <Link href="/" className="block">
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            width={120}
+                            height={30}
+                            layout="responsive"
+                            priority
+                            className="object-cover"
+                        />
+                    </Link>
                 </div>
 
                 {/* Desktop Nav */}
@@ -53,13 +55,15 @@ function HeaderNav() {
                             key={item.id}
                             href={item.link}
                             onClick={(e) => {
-                                e.preventDefault(); // Prevent default navigation
-                                const target = document.getElementById(item.id);
-                                if (target) {
-                                    target.scrollIntoView({ behavior: "smooth" });
-                                }
-                                if (item.id === "locations") {
-                                    setShowLocations((prev) => !prev);
+                                if (item.link.startsWith("#")) {
+                                    e.preventDefault(); // Prevent default navigation
+                                    const target = document.getElementById(item.id);
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                } else if (item.id === "locations") {
+                                    e.preventDefault(); // Prevent default navigation
+                                    setShowLocations(prev => !prev); // Toggle locations dropdown
                                 }
                             }}
                             className="flex gap-3 items-center hover:text-green-400"
