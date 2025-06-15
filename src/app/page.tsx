@@ -16,6 +16,7 @@ import { Star } from "lucide-react";
 import { testimonials } from "@/lib/constants";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import AnimatedWordMap from "@/components/AnimatedWordMap";
 
 export default function Home() {
 
@@ -156,11 +157,7 @@ export default function Home() {
                 <ExpansionDetails />
               </div>
               <div className="w-full md:w-[60%] relative h-[50vh] ">
-                <Image
-                  fill
-                  alt='word-map'
-                  src='/word.svg'
-                />
+                <AnimatedWordMap />
               </div>
             </div>
           </div>

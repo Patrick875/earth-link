@@ -17,8 +17,6 @@ const hostGrotesk = Host_Grotesk({
 function HeaderNav() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showLocations, setShowLocations] = useState(false)
-
-    // Disable body scroll when mobile menu is open
     useEffect(() => {
         if (menuOpen) {
             document.body.classList.add('overflow-hidden');
@@ -26,7 +24,7 @@ function HeaderNav() {
             document.body.classList.remove('overflow-hidden');
         }
         return () => {
-            document.body.classList.remove('overflow-hidden'); // clean up
+            document.body.classList.remove('overflow-hidden');
         };
     }, [menuOpen]);
 
@@ -56,14 +54,14 @@ function HeaderNav() {
                             href={item.link}
                             onClick={(e) => {
                                 if (item.link.startsWith("#")) {
-                                    e.preventDefault(); // Prevent default navigation
+                                    e.preventDefault();
                                     const target = document.getElementById(item.id);
                                     if (target) {
                                         target.scrollIntoView({ behavior: "smooth" });
                                     }
                                 } else if (item.id === "locations") {
-                                    e.preventDefault(); // Prevent default navigation
-                                    setShowLocations(prev => !prev); // Toggle locations dropdown
+                                    e.preventDefault();
+                                    setShowLocations(prev => !prev);
                                 }
                             }}
                             className="flex gap-3 items-center hover:text-green-400"
