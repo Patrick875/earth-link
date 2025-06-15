@@ -16,7 +16,7 @@ import { Star } from "lucide-react";
 import { testimonials } from "@/lib/constants";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import AnimatedWordMap from "@/components/AnimatedWordMap";
+import AnimatedWordMap from "@/components/map/AnimatedWordMap";
 
 export default function Home() {
 
