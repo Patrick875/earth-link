@@ -8,7 +8,6 @@ import { IoChevronForward } from "react-icons/io5";
 import { SlLike } from "react-icons/sl";
 import { motion } from "framer-motion";
 
-
 export default function AboutUs() {
 
     return (
