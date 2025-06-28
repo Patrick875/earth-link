@@ -111,7 +111,7 @@ export default function Home() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="mt-[40px] sm:mt-[67px]"
+        className="mt-0 sm:mt-[67px]"
       >
         <div className="w-[96%] sm:w-[90%] mx-auto">
         <Services />
@@ -221,138 +221,145 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap gap-4 justify-center p-2 sm:p-6">
           {locations.map((el) => (
-          <Dialog key={el.country}>
+            <Dialog key={el.country}>
             <DialogTrigger asChild>
-            <motion.div
+              <motion.div
               variants={fadeInUpContainer}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
               className="w-full sm:w-auto"
-            >
+              >
               <div className="flex items-center gap-4 bg-white shadow-sm rounded-sm p-4 w-full sm:w-60 cursor-pointer hover:shadow-md transition-none">
-              <div className="p-1 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full">
+                <div className="p-1 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full">
                 <div className={cn(el.icon, "h-14 w-14")} />
-              </div>
-              <div>
+                </div>
+                <div>
                 <div className="font-semibold">{el.country}</div>
                 <div className="text-sm text-[#475467] font-[400] text-[10px]">{el.city}</div>
+                </div>
               </div>
-              </div>
-            </motion.div>
+              </motion.div>
             </DialogTrigger>
-            <DialogContent className="!max-w-[98vw] sm:!max-w-[800px] transition-none">
-            <DialogHeader>
+            <DialogContent
+              className="!max-w-[98vw] sm:!max-w-[800px] !w-[98vw] sm:!w-auto !p-2 sm:!p-6 transition-none"
+              style={{
+              maxWidth: '98vw',
+              width: '98vw',
+              padding: '0.5rem',
+              }}
+            >
+              <DialogHeader>
               <DialogDescription>
-              <div className="max-w-2xl mx-auto p-2 space-y-8">
+                <div className="max-w-2xl mx-auto p-2 space-y-8">
                 {/* Stats */}
                 <div className="flex items-center gap-2 text-[#060E19] font-bold text-2xl">
-                {el.country}
-                <div className={cn(el.icon, "h-8 w-8")} />
+                  {el.country}
+                  <div className={cn(el.icon, "h-8 w-8")} />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
+                  <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
                   <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2">
-                  <div className="bg-white p-2 rounded-lg shadow-sm">
+                    <div className="bg-white p-2 rounded-lg shadow-sm">
                     <CircleDollarSign />
-                  </div>
-                  <div>
+                    </div>
+                    <div>
                     <div className="text-gray-400 text-xs font-semibold">LOCATION</div>
                     <div className="text-sm font-medium">{el.city}</div>
+                    </div>
                   </div>
                   </div>
-                </div>
-                <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
+                  <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
                   <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2">
-                  <div className="bg-white p-2 rounded-lg shadow-sm">
+                    <div className="bg-white p-2 rounded-lg shadow-sm">
                     <CircleDollarSign />
-                  </div>
-                  <div>
+                    </div>
+                    <div>
                     <div className="text-gray-400 text-xs font-semibold">FUND SIZE</div>
                     <div className="text-sm font-medium">{el.fundSize || "N/A"}</div>
+                    </div>
                   </div>
                   </div>
-                </div>
-                <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
+                  <div className="bg-gray-50 rounded-sm px-2 py-1 flex flex-col items-start gap-1 shadow-sm">
                   <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2">
-                  <div className="bg-white p-2 rounded-lg shadow-sm">
+                    <div className="bg-white p-2 rounded-lg shadow-sm">
                     <CircleDollarSign />
-                  </div>
-                  <div>
+                    </div>
+                    <div>
                     <div className="text-gray-400 text-xs font-semibold">GDP</div>
                     <div className="text-sm font-medium">{el.gdp || "N/A"}</div>
+                    </div>
                   </div>
                   </div>
-                </div>
                 </div>
 
                 {/* Country Overview */}
                 <div>
-                <h2 className="text-[#060E19] font-bold text-2xl">Country Overview</h2>
-                <p className="text-gray-500 mt-2">
+                  <h2 className="text-[#060E19] font-bold text-2xl">Country Overview</h2>
+                  <p className="text-gray-500 mt-2">
                   {el.description || "A strategic African market with a growing digital economy and stable business environment."}
-                </p>
+                  </p>
                 </div>
 
                 {/* Economic Landscape */}
                 <div>
-                <h2 className="text-[#060E19] font-bold text-2xl">Economic Landscape</h2>
-                <p className="text-gray-500 mt-2">
+                  <h2 className="text-[#060E19] font-bold text-2xl">Economic Landscape</h2>
+                  <p className="text-gray-500 mt-2">
                   {el.economicLandscape || "Diverse economy with strong focus on services and digital transformation."}
-                </p>
+                  </p>
                 </div>
 
                 {/* Key Industries */}
                 <div>
-                <h3 className="font-semibold text-lg">Key Industries</h3>
-                <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1 ml-4">
+                  <h3 className="font-semibold text-lg">Key Industries</h3>
+                  <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1 ml-4">
                   {(el.industries || ["Telecommunications", "Agriculture", "Fishing", "Tourism"]).map((industry, i) => (
-                  <li key={i}>{industry}</li>
+                    <li key={i}>{industry}</li>
                   ))}
-                </ul>
+                  </ul>
                 </div>
 
                 {/* Business Opportunities */}
                 <div>
-                <h3 className="font-semibold text-lg">Business Opportunities</h3>
-                <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1 ml-4">
+                  <h3 className="font-semibold text-lg">Business Opportunities</h3>
+                  <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1 ml-4">
                   {(el.opportunities || [
-                  "Digital Banking Solutions",
-                  "Agritech Innovations",
-                  "Smart City Development",
-                  "E-commerce Platforms"
+                    "Digital Banking Solutions",
+                    "Agritech Innovations",
+                    "Smart City Development",
+                    "E-commerce Platforms"
                   ]).map((op, i) => (
-                  <li key={i}>{op}</li>
+                    <li key={i}>{op}</li>
                   ))}
-                </ul>
+                  </ul>
                 </div>
 
                 {/* Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 shadow-sm">
+                  <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 shadow-sm">
                   <div className="bg-green-500 text-white text-xss p-2 rounded-full">
-                  <Mail />
+                    <Mail />
                   </div>
                   <div>
-                  <div className="font-semibold">Email Address</div>
-                  <div className="text-xs text-gray-400">{el.email || "info@earthlinkgroup.com"}</div>
+                    <div className="font-semibold">Email Address</div>
+                    <div className="text-xs text-gray-400">{el.email || "info@earthlinkgroup.com"}</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 shadow-sm">
+                  </div>
+                  <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 shadow-sm">
                   <div className="bg-green-500 text-white text-xss p-2 rounded-full">
-                  <PhoneCall />
+                    <PhoneCall />
                   </div>
                   <div>
-                  <div className="font-semibold">Phone Number</div>
-                  <div className="text-xs text-gray-400">{el.phone || "+250 788447599"}</div>
+                    <div className="font-semibold">Phone Number</div>
+                    <div className="text-xs text-gray-400">{el.phone || "+250 788447599"}</div>
+                  </div>
                   </div>
                 </div>
                 </div>
-              </div>
               </DialogDescription>
-            </DialogHeader>
+              </DialogHeader>
             </DialogContent>
-          </Dialog>
+            </Dialog>
           ))}
         </div>
         </div>
