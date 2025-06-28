@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
 import Link from 'next/link';
 import { IoChevronForward } from 'react-icons/io5';
+import { motion } from "framer-motion";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -96,7 +97,13 @@ export default function ContactForm() {
                 <div className="w-[90%] mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         <div className="bg-white rounded-2xl p-8 lg:p-12">
-                            <div className="mb-8">
+                            <motion.div
+                                className="mb-8"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 0.7, ease: "anticipate" }}
+                                viewport={{ once: true, amount: 0.4 }}
+                            >
                                 <h1 className=" text-[40px] font-light text-gray-900">
                                     Let&apos;s Expand Your
                                 </h1>
@@ -107,10 +114,22 @@ export default function ContactForm() {
                                     Connect with our global expansion experts and transform your
                                     international business strategy
                                 </p>
-                            </div>
+                            </motion.div>
 
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <motion.form
+                                className="space-y-6"
+                                initial={{ opacity: 0, y: 60, scale: 0.98 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 0.7, ease: "anticipate", delay: 0.2 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
+                                <motion.div
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                                    initial={{ opacity: 0, x: -40 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                >
                                     <div>
                                         <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                                             Your Name
@@ -141,9 +160,15 @@ export default function ContactForm() {
                                             className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300"
                                         />
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <motion.div
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                                    initial={{ opacity: 0, x: 40 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                >
                                     <div>
                                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                                             Phone
@@ -179,9 +204,14 @@ export default function ContactForm() {
                                             <option value="consultation">General Consultation</option>
                                         </select>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                >
                                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                                         Your Message
                                     </label>
@@ -194,16 +224,18 @@ export default function ContactForm() {
                                         placeholder="Tell us about your business expansion goals and how we can help you succeed globally..."
                                         className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 hover:border-gray-300 resize-vertical"
                                     />
-                                </div>
+                                </motion.div>
 
-                                <button
+                                <motion.button
                                     type="submit"
                                     disabled={isSubmitting}
+                                    whileHover={{ scale: 1.04, boxShadow: "0 4px 24px rgba(34,197,94,0.15)" }}
+                                    whileTap={{ scale: 0.98 }}
                                     className="w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-4 px-12 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                                 >
                                     {isSubmitting ? 'Sending...' : 'SUBMIT'}
-                                </button>
-                            </form>
+                                </motion.button>
+                            </motion.form>
                         </div>
 
                         <div className="space-y-6 lg:pt-12">
