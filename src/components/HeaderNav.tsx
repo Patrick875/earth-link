@@ -81,8 +81,8 @@ function HeaderNav() {
                                 <div className='p-3 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full'>
                                     <div className={cn(el.icon, 'h-14 w-14')} />
                                 </div>
-                                <div>
-                                    <p className='font-semibold '>{el.country}</p>
+                                <div className="pr-4">
+                                    <p className='font-semibold'>{el.country}</p>
                                     <p className='text-xs text-gray-400'>{el.description}</p>
                                 </div>
                             </div>)}

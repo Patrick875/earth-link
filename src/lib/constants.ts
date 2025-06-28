@@ -208,115 +208,258 @@ export const fadeInUpContainer = {
 export const locations = [
 	{
 		country: "Senegal",
+		city: "Dakar",
 		description: "A strategic West African market with a growing digital economy and stable business environment.",
 		icon: "fi fi-sn",
+		fundSize: "USD 322M",
+		gdp: "USD 24.5B",
+		economicLandscape: "Diverse economy with strong agriculture, services, and emerging tech sectors.",
+		industries: [
+			"Telecommunications",
+			"Agriculture",
+			"Fishing",
+			"Tourism"
+		],
+		opportunities: [
+			"Digital Banking Solutions",
+			"Agritech Innovations",
+			"Smart City Development",
+			"E-commerce Platforms"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
-		country: "Tanzaia",
+		country: "Tanzania",
+		city: "Dar es Salaam",
 		description: "East African powerhouse with significant digital growth potential and diverse market opportunities.",
 		icon: "fi fi-tz",
+		fundSize: "USD 480M",
+		gdp: "USD 67.8B",
+		economicLandscape: "Rapidly growing economy with strengths in agriculture, mining, and tourism.",
+		industries: [
+			"Mining",
+			"Agriculture",
+			"Tourism",
+			"Telecommunications"
+		],
+		opportunities: [
+			"Fintech Expansion",
+			"Agro-processing",
+			"Tourism Tech",
+			"Mobile Services"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
 		country: "Angola",
+		city: "Luanda",
 		description: "Resource-rich nation with growing focus on digital transformation and economic diversification.",
 		icon: "fi fi-ao",
+		fundSize: "USD 620M",
+		gdp: "USD 74.6B",
+		economicLandscape: "Oil-driven economy diversifying into agriculture, construction, and technology.",
+		industries: [
+			"Oil & Gas",
+			"Construction",
+			"Telecommunications",
+			"Agriculture"
+		],
+		opportunities: [
+			"Digital Infrastructure",
+			"AgriTech",
+			"Energy Tech",
+			"Smart Logistics"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
 		country: "Mozambique",
+		city: "Maputo",
 		description: "Emerging market with significant potential in digital services and infrastructure development.",
 		icon: "fi fi-mz",
+		fundSize: "USD 510M",
+		gdp: "USD 17.8B",
+		economicLandscape: "Developing economy with focus on natural resources, agriculture, and services.",
+		industries: [
+			"Natural Gas",
+			"Agriculture",
+			"Tourism",
+			"Telecommunications"
+		],
+		opportunities: [
+			"Digital Banking",
+			"Infrastructure Tech",
+			"Tourism Platforms",
+			"AgriTech"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
 		country: "Zambia",
+		city: "Lusaka",
 		description: "Central African nation with growing tech adoption and digital transformation initiatives.",
 		icon: "fi fi-zm",
+		fundSize: "USD 322M",
+		gdp: "USD 29.2B",
+		economicLandscape: "Mining-based economy expanding into agriculture and services.",
+		industries: [
+			"Mining",
+			"Agriculture",
+			"Financial Services",
+			"Telecommunications"
+		],
+		opportunities: [
+			"Fintech",
+			"AgriTech",
+			"Digital Payments",
+			"Smart Mining"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
 		country: "Liberia",
+		city: "Monrovia",
 		description: "Emerging West African market with growing potential for digital transformation.",
 		icon: "fi fi-lr",
+		fundSize: "USD 322M",
+		gdp: "USD 3.5B",
+		economicLandscape: "Resource-based economy with increasing focus on services and technology.",
+		industries: [
+			"Mining",
+			"Agriculture",
+			"Telecommunications",
+			"Shipping"
+		],
+		opportunities: [
+			"Digital Services",
+			"AgriTech",
+			"Shipping Tech",
+			"Mobile Banking"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
 	{
 		country: "Gabon",
+		city: "Libreville",
 		description: "Resource-rich nation pursuing digital transformation and economic diversification.",
 		icon: "fi fi-ga",
+		fundSize: "USD 322M",
+		gdp: "USD 21.1B",
+		economicLandscape: "Oil-based economy diversifying into services and digital sectors.",
+		industries: [
+			"Oil & Gas",
+			"Forestry",
+			"Telecommunications",
+			"Services"
+		],
+		opportunities: [
+			"Digital Infrastructure",
+			"Smart Forestry",
+			"Fintech",
+			"E-commerce"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	},
-
 	{
 		country: "Rwanda",
+		city: "Kigali",
 		description: "A leading African tech hub known for its rapid digital transformation and innovation-friendly environment.",
 		icon: "fi fi-rw",
+		fundSize: "USD 480M",
+		gdp: "USD 13.3B",
+		economicLandscape: "Service-driven economy with strong ICT, tourism, and agriculture sectors.",
+		industries: [
+			"Information Technology",
+			"Tourism",
+			"Agriculture",
+			"Financial Services"
+		],
+		opportunities: [
+			"Fintech",
+			"Smart City Solutions",
+			"AgriTech",
+			"Tourism Tech"
+		],
+		email: "info@earthlinkgroup.com",
+		phone: "+250 788 447 599",
 	}
 ];
 
 export const services = [
-	    {
-        id: 'registration',
-        title: 'Company formation/registration',
-        description: 'We simplify the complexities of setting up a business in new markets, ensuring a smooth registration process, regulatory compliance, and structured corporate governance.',
-        cardImage: '/registration.jpg'
-    },
-    {
-        id: 'advisory',
-        title: 'Corporate advisory services',
-        description: 'We provide expert advisory solutions to support international business expansion, ensuring compliance, efficiency, and strategic business growth.',
-        cardImage: '/service.jpg'
+	{
+		id: 'registration',
+		title: 'Company formation/registration',
+		description: 'We simplify the complexities of setting up a business in new markets, ensuring a smooth registration process, regulatory compliance, and structured corporate governance.',
+		cardImage: '/registration.jpg'
+	},
+	{
+		id: 'advisory',
+		title: 'Corporate advisory services',
+		description: 'We provide expert advisory solutions to support international business expansion, ensuring compliance, efficiency, and strategic business growth.',
+		cardImage: '/service.jpg'
 
-    },
-    {
-        id: 'support',
-        title: 'Business support services',
-        description: 'Our business support solutions enhance efficiency and competitiveness, enabling companies to successfully focus on their core operation and enter new markets.',
-        cardImage: '/business.jpg'
+	},
+	{
+		id: 'support',
+		title: 'Business support services',
+		description: 'Our business support solutions enhance efficiency and competitiveness, enabling companies to successfully focus on their core operation and enter new markets.',
+		cardImage: '/business.jpg'
 
-    },
-    {
-        id: 'partnerships',
-        title: 'Strategic partnerships',
-        description: 'We facilitate high-value connections between businesses, government entities, and industry leaders, fostering strategic collaborations that drive growth and market expansion.',
-        cardImage: '/strategy.jpg'
+	},
+	{
+		id: 'partnerships',
+		title: 'Strategic partnerships',
+		description: 'We facilitate high-value connections between businesses, government entities, and industry leaders, fostering strategic collaborations that drive growth and market expansion.',
+		cardImage: '/strategy.jpg'
 
-    },
-    {
-        id: 'investment',
-        title: 'Financial and investment services',
-        description: 'Our expert financial services provide businesses with the stability and insights needed to optimize resources, manage risks, and drive long-term profitability in dynamic global markets.',
-        cardImage: '/financial.jpg'
+	},
+	{
+		id: 'investment',
+		title: 'Financial and investment services',
+		description: 'Our expert financial services provide businesses with the stability and insights needed to optimize resources, manage risks, and drive long-term profitability in dynamic global markets.',
+		cardImage: '/financial.jpg'
 
-    },
-    {
-        id: 'tour',
-        title: 'Business tour services',
-        description: 'We curate seamless business travel experiences, handling logistics, documentation, and planning to help professionals explore new opportunities with ease and confidence.',
-        cardImage: '/tour.jpg'
-    }
+	},
+	{
+		id: 'tour',
+		title: 'Business tour services',
+		description: 'We curate seamless business travel experiences, handling logistics, documentation, and planning to help professionals explore new opportunities with ease and confidence.',
+		cardImage: '/tour.jpg'
+	}
 ];
 
 export const expansions = [
-    {
-        id: 'total',
-        numerical: '322M',
+	{
+		id: 'total',
+		numerical: '322M',
 		target: 16,
-        title: 'West Africa',
-    },
-    {
-        id: 'total-2',
-        numerical: '480M',
+		title: 'West Africa',
+	},
+	{
+		id: 'total-2',
+		numerical: '480M',
 		target: 18,
-        title: 'East Africa',
-    },
-    {
-        id: 'funding-2',
-        numerical: '620M',
+		title: 'East Africa',
+	},
+	{
+		id: 'funding-2',
+		numerical: '620M',
 		target: 5,
-        title: 'Southern Africa',
+		title: 'Southern Africa',
 
-    },
-    {
-        id: 'round',
-        numerical: '510M',
+	},
+	{
+		id: 'round',
+		numerical: '510M',
 		target: 9,
-        title: 'Central Africa',
-    },
+		title: 'Central Africa',
+	},
 
 ]
