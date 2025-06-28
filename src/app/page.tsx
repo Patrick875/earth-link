@@ -21,7 +21,6 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 
@@ -221,7 +220,7 @@ export default function Home() {
           <h1 className="text-[#03192E] text-[28px] sm:text-[32px] md:text-[40px] font-[700] text-center"> Our Business Expansion Across Africa</h1>
         </div>
         <div className="flex flex-wrap gap-4 justify-center p-2 sm:p-6">
-          {locations.map((el, idx) => (
+          {locations.map((el) => (
           <Dialog key={el.country}>
             <DialogTrigger asChild>
             <motion.div
