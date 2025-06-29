@@ -54,6 +54,7 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden scroll-smooth bg-[#FBFBFB]">
+      
       <HeroSection>
       <h1 className='text-[32px] sm:text-[40px] md:text-[60px] font-[700] leading-[120%] text-center md:text-left'>
         Expand Your Business Globally with
