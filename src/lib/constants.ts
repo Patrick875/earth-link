@@ -16,12 +16,12 @@ export const headers = [
 	},
 	{
 		title: "Contact us",
-		link: "/contact-us",
+		link: "/contact_us",
 		id: "contact-us",
 	},
 	{
 		title: "About us",
-		link: "/about-us",
+		link: "/about_us",
 		id: "about-us",
 	},
 	{
@@ -30,6 +30,7 @@ export const headers = [
 		id: "blog",
 	},
 ];
+
 export const team = [
 	{
 		name: "Vianney",
@@ -50,6 +51,7 @@ export const team = [
 		profilePic: "/emily.5bf04170eab15b6313c2.jpg",
 	}
 ];
+
 export const companyHeaders = [
 	{
 		title: "About us",
@@ -67,12 +69,19 @@ export const companyHeaders = [
 		id: "blog",
 	},
 ];
+
 export const officeInfo = {
 	email: "info@eathlingroup.com",
 	location: "3355+79M CHIC Building, 1st Floor E046A2, Kigali",
 	phone: "+250 788 447 599",
 };
-export const whys = ["Security and Privacy", "Expert Support", "Scalability and Flexibility", "Cost-Effective Solutions"];
+
+export const whys = [
+	"Security and Privacy",
+	"Expert Support",
+	"Scalability and Flexibility",
+	"Cost-Effective Solutions"
+];
 
 export const testimonials = [
 	{
@@ -167,7 +176,15 @@ export const categories = [
 	{ name: "Target Audience", count: 1 },
 ];
 
-export const popularTags = ["Banking", "Data Analysis", "Finance", "Finance Advisor", "Investment", "Security", "Tax Consultancy"];
+export const popularTags = [
+	"Banking",
+	"Data Analysis",
+	"Finance",
+	"Finance Advisor",
+	"Investment",
+	"Security",
+	"Tax Consultancy"
+];
 
 export const fadeInUp = {
 	hidden: { opacity: 0, y: 40 },
@@ -396,41 +413,100 @@ export const services = [
 	{
 		id: 'registration',
 		title: 'Company formation/registration',
-		description: 'We simplify the complexities of setting up a business in new markets, ensuring a smooth registration process, regulatory compliance, and structured corporate governance.',
+		short_description: 'We simplify the process of establishing a business in new markets by handling company registration, structuring governance, and ensuring regulatory compliance.',
+		long_description: {
+			p1: 'Our services include conducting due diligence to assess risks, facilitating business setup and licensing, providing resident director and national shareholder services for foreign investors, and assisting with corporate bank account openings to ensure smooth financial operations.',
+			p2: 'We ensure that your business is compliant with local laws and regulations, allowing you to focus on your core operations while we take care of the administrative and legal aspects of company formation.',
+		},
+		keyBenefits: [
+			'Due diligence',
+			'Business set up',
+			'Resident director services',
+			'National shareholder services'
+		],
 		cardImage: '/registration.jpg'
 	},
 	{
 		id: 'advisory',
 		title: 'Corporate advisory services',
-		description: 'We provide expert advisory solutions to support international business expansion, ensuring compliance, efficiency, and strategic business growth.',
+		short_description: 'We provide expert advisory solutions to support international business expansion, ensuring compliance, efficiency, and strategic business growth.',
+		long_description: {
+			p1: 'Our corporate advisory services include market entry strategies, regulatory compliance, risk management, and operational efficiency improvements to help businesses thrive in new markets.',
+			p2: 'We leverage our expertise to provide tailored solutions that address the unique challenges of international business operations, ensuring that your company is well-positioned for success in a competitive global landscape.'
+		},
+		keyBenefits: [
+			'Market entry strategies',
+			'Regulatory compliance',
+			'Risk management',
+			'Operational efficiency improvements'
+		],
 		cardImage: '/service.jpg'
 
 	},
 	{
 		id: 'support',
 		title: 'Business support services',
-		description: 'Our business support solutions enhance efficiency and competitiveness, enabling companies to successfully focus on their core operation and enter new markets.',
+		short_description: 'Our business support solutions enhance efficiency and competitiveness, enabling companies to successfully focus on their core operation and enter new markets.',
+		long_description: {
+			p1: 'We offer a range of support services including administrative assistance, IT solutions, and operational management to streamline business processes and enhance productivity.',
+			p2: 'Our team of experts provides tailored solutions to meet the specific needs of your business, ensuring that you have the necessary support to thrive in a dynamic and competitive environment.'
+		},
+		keyBenefits: [
+			'Administrative assistance',
+			'IT solutions',
+			'Operational management',
+			'Streamlined business processes'
+		],
 		cardImage: '/business.jpg'
 
 	},
 	{
 		id: 'partnerships',
 		title: 'Strategic partnerships',
-		description: 'We facilitate high-value connections between businesses, government entities, and industry leaders, fostering strategic collaborations that drive growth and market expansion.',
+		short_description: 'We facilitate high-value connections between businesses, government entities, and industry leaders, fostering strategic collaborations that drive growth and market expansion.',
+		long_description: {
+			p1: 'Our strategic partnerships services include identifying potential partners, negotiating agreements, and managing relationships to create synergies that enhance business opportunities and market reach.',
+			p2: 'We leverage our extensive network to connect businesses with key stakeholders, ensuring mutually beneficial collaborations that drive innovation and growth.'
+		},
+		keyBenefits: [
+			'Identifying potential partners',
+			'Negotiating agreements',
+			'Managing relationships',
+			'Creating synergies'
+		],
 		cardImage: '/strategy.jpg'
-
 	},
 	{
 		id: 'investment',
 		title: 'Financial and investment services',
-		description: 'Our expert financial services provide businesses with the stability and insights needed to optimize resources, manage risks, and drive long-term profitability in dynamic global markets.',
+		short_description: 'Our expert financial services provide businesses with the stability and insights needed to optimize resources, manage risks, and drive long-term profitability in dynamic global markets.',
+		long_description: {
+			p1: 'We offer comprehensive financial services including investment advisory, risk management, and financial planning to help businesses achieve their financial goals and navigate complex market environments.',
+			p2: 'Our team of financial experts provides tailored solutions to optimize resource allocation, manage risks, and enhance overall financial performance.'
+		},
+		keyBenefits: [
+			'Investment advisory',
+			'Risk management',
+			'Financial planning',
+			'Resource optimization'
+		],
 		cardImage: '/financial.jpg'
 
 	},
 	{
 		id: 'tour',
 		title: 'Business tour services',
-		description: 'We curate seamless business travel experiences, handling logistics, documentation, and planning to help professionals explore new opportunities with ease and confidence.',
+		short_description: 'We curate seamless business travel experiences, handling logistics, documentation, and planning to help professionals explore new opportunities with ease and confidence.',
+		long_description: {
+			p1: 'Our business tour services include travel planning, visa assistance, and on-ground support to ensure a smooth and productive travel experience for business professionals exploring new markets.',
+			p2: 'We handle all aspects of business travel, from itinerary planning to local support, allowing professionals to focus on their core business activities while we take care of the logistics.'
+		},
+		keyBenefits: [
+			'Travel planning',
+			'Visa assistance',
+			'On-ground support',
+			'Seamless travel experiences'
+		],
 		cardImage: '/tour.jpg'
 	}
 ];

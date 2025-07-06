@@ -1,6 +1,6 @@
 'use client'
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { FaGooglePlusG, FaYoutube } from 'react-icons/fa';
 import { TiSocialFacebook, TiSocialLinkedin } from 'react-icons/ti';
@@ -44,13 +44,13 @@ const Footer: React.FC = () => (
             <div className='col-span-1'>
                 <p className='text-[24px]'>Quick Links</p>
                 <div className='mt-[16px] flex flex-col gap-4 font-[400]'>
-                    {headers.map((item) => <Link key={item.id} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</Link>)}
+                    {headers.map((item) => <a key={item.id} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</a>)}
                 </div>
             </div>
             <div className='col-span-1'>
                 <p className='text-[24px]'>Company</p>
                 <div className='mt-[16px] flex flex-col gap-4 font-[400]'>
-                    {companyHeaders.map((item, index) => <Link key={item.id + index} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</Link>)}
+                    {companyHeaders.map((item, index) => <a key={item.id + index} href={item.link} className='block hover:hover:text-[#19B32F]/90'>{item.title}</a>)}
                 </div>
             </div>
             <div className='col-span-1'>
@@ -75,8 +75,8 @@ const Footer: React.FC = () => (
         <div className="w-full bg-[#1986C3] min-h-[8vh] flex justify-center">
             <div className="flex justify-between items-center  text-white w-[90%] mx-auto">
                 <div className='flex items-center gap-4 '>
-                    <Link href='#' className='block'>Privacy policy</Link>
-                    <Link href='#' className='block'>Terms and conditions</Link>
+                    <a href='#' className='block'>Privacy policy</a>
+                    <a href='#' className='block'>Terms and conditions</a>
                 </div>
                 <p>&copy;All rights reserved.  EarthLink Business  {new Date().getFullYear()}</p>
             </div>

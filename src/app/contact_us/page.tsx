@@ -1,9 +1,8 @@
 'use client';
-
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
-import Link from 'next/link';
 import { IoChevronForward } from 'react-icons/io5';
 import { motion } from "framer-motion";
 
@@ -88,9 +87,9 @@ export default function ContactForm() {
                     Contact us
                 </h1>
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
-                    <Link href='/' className='block text-white'>Home</Link>
+                    <a href='/' className='block text-white'>Home</a>
                     <IoChevronForward className='block text-white' />
-                    <Link href='/contact-us' className='block text-white'>Contact us</Link>
+                    <a href='/contact-us' className='block text-white'>Contact us</a>
                 </div>
             </HeroSection>
             <section className=" mt-[30px]  min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">

@@ -1,8 +1,7 @@
 'use client';
-
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { headers, locations } from "../lib/constants";
 import { ChevronDownIcon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,7 +32,7 @@ function HeaderNav() {
             <div className="w-[90%] mx-auto flex justify-between items-center ">
                 {/* Logo */}
                 <div className="h-fit w-32">
-                    <Link href="/" className="block">
+                    <a href="/" className="block">
                         <Image
                             src="/logo.png"
                             alt="Logo"
@@ -43,13 +42,13 @@ function HeaderNav() {
                             priority
                             className="object-cover"
                         />
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex w-3/6 items-center justify-between relative">
                     {headers.map((item) => (
-                        <Link
+                        <a
                             key={item.id}
                             href={item.link}
                             onClick={(e) => {
@@ -70,7 +69,7 @@ function HeaderNav() {
                             {item.id === "locations" && (
                                 <ChevronDownIcon className={cn("h-4 w-4", showLocations && "rotate-180")} />
                             )}
-                        </Link>
+                        </a>
                     ))}
                 </nav>
 
@@ -92,11 +91,11 @@ function HeaderNav() {
 
                 {/* Desktop Contact Button */}
                 <div className="hidden md:block">
-                    <Link href='/contact-us'>
+                    <a href='/contact-us'>
                         <button className="rounded-[6px] bg-[#19B32F] py-[16px] px-[8px] w-[207px] text-white hover:bg-[#19B32F]/90">
                             Contact us
                         </button>
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -130,14 +129,14 @@ function HeaderNav() {
                     </div>
                     <nav className="flex flex-col gap-6 pt-20">
                         {headers.map((item) => (
-                            <Link
+                            <a
                                 key={item.id}
                                 href={item.link}
                                 onClick={() => setMenuOpen(false)} // Close on link click
                                 className="text-lg hover:text-sky-800"
                             >
                                 {item.title}
-                            </Link>
+                            </a>
                         ))}
                         <button
                             onClick={() => setMenuOpen(false)}

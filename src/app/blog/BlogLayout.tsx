@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Search, Calendar, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaPlay } from "react-icons/fa";

@@ -1,8 +1,8 @@
 'use client'
+/* eslint-disable @next/next/no-html-link-for-pages */
 import HeroSection from "@/components/HeroSection";
 import { team } from "@/lib/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { CiMedal } from "react-icons/ci";
 import { IoChevronForward } from "react-icons/io5";
 import { SlLike } from "react-icons/sl";
@@ -17,9 +17,9 @@ export default function AboutUs() {
                     About us
                 </h1>
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
-                    <Link href='/' className='block text-white'>Home</Link>
+                    <a href='/' className='block text-white'>Home</a>
                     <IoChevronForward className='block text-white' />
-                    <Link href='/about-us' className='block text-white'>About us</Link>
+                    <a href='/about-us' className='block text-white'>About us</a>
                 </div>
             </HeroSection>
             <main className="bg-white">
@@ -96,11 +96,11 @@ export default function AboutUs() {
                                 We are a business set-up and management consultancy firm. Our focus is not only on helping clients start new businesses or expand existing ones in African countries but also on developing management strategies for growth in those new territories.
                             </p>
                             <div className='mt-[68px]'>
-                                <Link href='/contact-us'>
+                                <a href='/contact-us'>
                                     <button className='w-[224px] h-[56px] text-white rounded-[6px] bg-[#1986C3]'>
                                         Contact us
                                     </button>
-                                </Link>
+                                </a>
                             </div>
                         </motion.div>
                     </div>

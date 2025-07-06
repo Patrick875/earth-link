@@ -4,9 +4,10 @@
 
 .hero-section {
 	background-image: url("/hero.png");
-	width: 100vw;
 	background-size: cover;
 	background-repeat: no-repeat;
+	max-width: 100%;
+	width: 100%;
 }
 
 @layer base {
