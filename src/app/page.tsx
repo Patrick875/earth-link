@@ -56,7 +56,7 @@ export default function Home() {
     <main className="bg-[#FAFAFA]">
 
       <HeroSection>
-        <h1 className='text-[32px] sm:text-[40px] md:text-[60px] font-[700] leading-[120%] text-center md:text-left'>
+        <h1 className='text-[32px] sm:text-[40px] md:text-[40x] font-[700] leading-[120%] text-center md:text-left w-10/12'>
           Expand Your Business Globally with
           <ReactTyped
             className="text-[#19B32F] ml-3"
@@ -66,8 +66,8 @@ export default function Home() {
             loop
           />
         </h1>
-        <p className='text-[16px] sm:text-[18px] font-[400] mt-[12px] leading-[150%] text-center md:text-left max-w-2xl mx-auto md:mx-0'>
-          EarthLink Business is your strategic partner in international business expansion. We provide comprehensive solutions to help companies overcome cross-border challenges, navigate complex markets, and unlock global growth opportunities.
+        <p className="font-normal mt-3 leading-relaxed text-center md:text-left max-w-2xl mx-auto md:mx-0">
+          EarthLink Business is your strategic partner for international expansion. We help companies overcome cross-border challenges, navigate complex markets, and unlock global growth opportunities with comprehensive solutions.
         </p>
         <div className="mt-[32px] flex flex-col gap-4 items-center sm:flex-row sm:gap-4 w-full max-w-xl mx-auto md:mx-0">
           <button
@@ -127,16 +127,16 @@ export default function Home() {
         className="mt-[40px] sm:mt-[60px] md:mt-[100px]"
       >
         <div className="w-[96%] sm:w-[90%] mx-auto">
-          <div className="flex flex-col-reverse md:flex-row md:justify-between gap-8">
+          <div className="flex flex-col-reverse md:flex-row md:justify-between">
             <motion.div
               variants={fadeInUpContainer}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
-              className="w-full md:w-[48%] my-[32px] md:my-[54px]"
+              className="md:w-[40%] h-[240px] sm:h-[320px] md:h-[50vh] flex flex-col justify-center items-start "
             >
               <div>
-                <h3 className='text-[28px] sm:text-[34px] md:text-[40px] font-[700] leading-[120%] '>Why Choose</h3>
+                <h3 className='text-[28px] sm:text-[34px] md:text-[40px] font-[700] leading-[120%]'>Why Choose</h3>
                 <h3 className='text-[32px] sm:text-[40px] font-[700] leading-[120%] text-[#1986C3]'>Earth Link Group</h3>
               </div>
               <p className='mt-[24px] sm:mt-[32px] text-[16px] sm:text-[18px]'>
@@ -154,6 +154,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
             </motion.div>
             <motion.div
               variants={fadeInUpContainer}
@@ -189,7 +190,7 @@ export default function Home() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="relative bg-gradient-to-br from-[#1986C3] via-[#1986C3]/90 to-[#19B32F]/80 mt-[60px] sm:mt-[80px] md:mt-[118px] w-full md:min-h-[60vh] shadow-lg overflow-hidden"
+        className="relative bg-[#1986C3] mt-[60px] sm:mt-[80px] md:mt-[118px] w-full md:min-h-[60vh] overflow-hidden"
       >
         <div className="w-[96%] sm:w-[90%] mx-auto py-[60px] sm:py-[100px]">
           <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-6 text-white">
@@ -529,7 +530,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, type: "spring" }}
-            className="mt-[20px] sm:mt-[35px] text-[16px] sm:text-[18px] text-center md:text-start max-w-2xl"
+            className="mt-[20px] sm:mt-[35px] text-[16px] sm:text-[18px] text-center  max-w-2xl"
           >
             Schedule a consultation with our global expansion experts and transform your international business strategy
           </motion.p>
@@ -538,7 +539,7 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
           >
-            <a href="/contact-us">
+            <a href="/contact_us">
               <button className="rounded-[8px] w-[180px] sm:w-[224px] h-[48px] sm:h-[56px] bg-[#19B32F] text-white hover:bg-[#19B32F]/80 text-base shadow-lg shadow-[#19B32F]/20 transition-all duration-200 hover:scale-105">
                 Contact us
               </button>

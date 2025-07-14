@@ -10,6 +10,14 @@
 	width: 100%;
 }
 
+.country-hero-section {
+	background-image: url("/country-hero.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	width: 100%;
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;

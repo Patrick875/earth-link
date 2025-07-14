@@ -96,7 +96,7 @@ export default function AboutUs() {
                                 We are a business set-up and management consultancy firm. Our focus is not only on helping clients start new businesses or expand existing ones in African countries but also on developing management strategies for growth in those new territories.
                             </p>
                             <div className='mt-[68px]'>
-                                <a href='/contact-us'>
+                                <a href='/contact_us'>
                                     <button className='w-[224px] h-[56px] text-white rounded-[6px] bg-[#1986C3]'>
                                         Contact us
                                     </button>

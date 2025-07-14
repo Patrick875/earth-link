@@ -89,7 +89,7 @@ export default function ContactForm() {
                 <div className='flex gap-3 items-center text-white border-[1.4px] border-white rounded-[6px] w-fit py-2 px-4 mt-[16px]'>
                     <a href='/' className='block text-white'>Home</a>
                     <IoChevronForward className='block text-white' />
-                    <a href='/contact-us' className='block text-white'>Contact us</a>
+                    <a href='/contact_us' className='block text-white'>Contact us</a>
                 </div>
             </HeroSection>
             <section className=" mt-[30px]  min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">

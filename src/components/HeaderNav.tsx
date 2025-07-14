@@ -6,6 +6,7 @@ import { headers, locations } from "../lib/constants";
 import { ChevronDownIcon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Host_Grotesk } from 'next/font/google'
+import { useRef } from "react";
 
 const hostGrotesk = Host_Grotesk({
     variable: "--font-host",
@@ -16,6 +17,8 @@ const hostGrotesk = Host_Grotesk({
 function HeaderNav() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showLocations, setShowLocations] = useState(false)
+    const locationDropdownRef = useRef(null);
+
     useEffect(() => {
         if (menuOpen) {
             document.body.classList.add('overflow-hidden');
@@ -26,6 +29,25 @@ function HeaderNav() {
             document.body.classList.remove('overflow-hidden');
         };
     }, [menuOpen]);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                locationDropdownRef.current &&
+                !locationDropdownRef.current.contains(event.target)
+            ) {
+                setShowLocations(false);
+            }
+        }
+
+        if (showLocations) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showLocations]);
 
     return (
         <header className={cn(hostGrotesk.className, "w-full text-white sticky md:top-0 md:z-50")}>
@@ -73,9 +95,13 @@ function HeaderNav() {
                     ))}
                 </nav>
 
-                {showLocations && <div className='hidden md:flex flex-col  absolute  top-24 left-40 w-[80vw] min-h-[38vh] bg-white rounded-[12px]'>
+                {showLocations && <div
+                    ref={locationDropdownRef}
+                    className='hidden md:flex flex-col  absolute  top-24 left-40 w-[80vw] min-h-[38vh] bg-white rounded-[12px]'
+                >
                     <div className="grid  grid-cols-3  h-[36vh] justify-between w-[90%] m-auto">
                         {locations.map((el) =>
+                        <a href={`${el.link.toLowerCase()}`} key={el.link} className='flex gap-4 items-center text-black hover:bg-gray-100 p-3 rounded-lg'>
                             <div key={el.country} className='flex gap-4 items-center text-black'>
                                 <div className='p-3 h-10 w-10 bg-sky-700/10 flex items-center justify-center rounded-full'>
                                     <div className={cn(el.icon, 'h-14 w-14')} />
@@ -84,14 +110,17 @@ function HeaderNav() {
                                     <p className='font-semibold'>{el.country}</p>
                                     <p className='text-xs text-gray-400'>{el.description}</p>
                                 </div>
-                            </div>)}
+                            </div>
+                        </a>
+                        )}
+
                     </div>
 
                 </div>}
 
                 {/* Desktop Contact Button */}
                 <div className="hidden md:block">
-                    <a href='/contact-us'>
+                    <a href='/contact_us'>
                         <button className="rounded-[6px] bg-[#19B32F] py-[16px] px-[8px] w-[207px] text-white hover:bg-[#19B32F]/90">
                             Contact us
                         </button>

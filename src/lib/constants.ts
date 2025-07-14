@@ -15,11 +15,6 @@ export const headers = [
 		id: "locations",
 	},
 	{
-		title: "Contact us",
-		link: "/contact_us",
-		id: "contact-us",
-	},
-	{
 		title: "About us",
 		link: "/about_us",
 		id: "about-us",
@@ -225,6 +220,7 @@ export const fadeInUpContainer = {
 export const locations = [
 	{
 		country: "Senegal",
+		link:"/senegal",
 		city: "Dakar",
 		description: "A strategic West African market with a growing digital economy and stable business environment.",
 		icon: "fi fi-sn",
@@ -248,6 +244,7 @@ export const locations = [
 	},
 	{
 		country: "Tanzania",
+		link: "#",
 		city: "Dar es Salaam",
 		description: "East African powerhouse with significant digital growth potential and diverse market opportunities.",
 		icon: "fi fi-tz",
@@ -271,6 +268,7 @@ export const locations = [
 	},
 	{
 		country: "Angola",
+		link: "#",
 		city: "Luanda",
 		description: "Resource-rich nation with growing focus on digital transformation and economic diversification.",
 		icon: "fi fi-ao",
@@ -294,6 +292,7 @@ export const locations = [
 	},
 	{
 		country: "Mozambique",
+		link: "#",
 		city: "Maputo",
 		description: "Emerging market with significant potential in digital services and infrastructure development.",
 		icon: "fi fi-mz",
@@ -317,6 +316,7 @@ export const locations = [
 	},
 	{
 		country: "Zambia",
+		link: "#",
 		city: "Lusaka",
 		description: "Central African nation with growing tech adoption and digital transformation initiatives.",
 		icon: "fi fi-zm",
@@ -340,6 +340,7 @@ export const locations = [
 	},
 	{
 		country: "Liberia",
+		link: "#",
 		city: "Monrovia",
 		description: "Emerging West African market with growing potential for digital transformation.",
 		icon: "fi fi-lr",
@@ -363,6 +364,7 @@ export const locations = [
 	},
 	{
 		country: "Gabon",
+		link: "#",
 		city: "Libreville",
 		description: "Resource-rich nation pursuing digital transformation and economic diversification.",
 		icon: "fi fi-ga",
@@ -386,6 +388,7 @@ export const locations = [
 	},
 	{
 		country: "Rwanda",
+		link: "#",
 		city: "Kigali",
 		description: "A leading African tech hub known for its rapid digital transformation and innovation-friendly environment.",
 		icon: "fi fi-rw",
