@@ -5,8 +5,10 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
 import { IoChevronForward } from 'react-icons/io5';
 import { motion } from "framer-motion";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactForm() {
+
     const [formData, setFormData] = useState({
         firstName: '',
         email: '',
@@ -14,7 +16,7 @@ export default function ContactForm() {
         service: '',
         message: ''
     });
-    const [isSubmitting,] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -24,43 +26,76 @@ export default function ContactForm() {
         }));
     };
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault()
 
-    //     // Validation
-    //     if (!formData.firstName || !formData.email || !formData.phone || !formData.service) {
-    //         alert('Please fill in all required fields.');
-    //         return;
-    //     }
+        // Basic required field validation
+        const { firstName, email, phone, service, message } = formData
 
-    //     // Email validation
-    //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //     if (!emailRegex.test(formData.email)) {
-    //         alert('Please enter a valid email address.');
-    //         return;
-    //     }
+        if (!firstName || !email || !phone || !service || !message) {
+            toast.error('Please fill in all required fields.')
+            return
+        }
 
-    //     setIsSubmitting(true);
+        // Basic email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email)) {
+            toast.error('Please enter a valid email address.')
+            return
+        }
 
-    //     // Simulate API call
-    //     try {
-    //         // Replace with your actual API call
-    //         await new Promise(resolve => setTimeout(resolve, 2000));
+        setIsSubmitting(true)
 
-    //         alert('Thank you for your message! We will get back to you within 24 hours.');
-    //         setFormData({
-    //             firstName: '',
-    //             email: '',
-    //             phone: '',
-    //             service: '',
-    //             message: ''
-    //         });
-    //     } catch (error) {
-    //         alert('Something went wrong. Please try again.');
-    //     } finally {
-    //         setIsSubmitting(false);
-    //     }
-    // };
+        try {
+            const res = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    to: 'support@earthlinkgroup.com', 
+                    subject: `Contact Request from ${firstName}`,
+                    text: `
+                            Name: ${firstName}
+                            Email: ${email}
+                            Phone: ${phone}
+                            Service: ${service}
+                            Message: ${message}
+                                    `,
+                    html: `
+                            <p><strong>Name:</strong> ${firstName}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Phone:</strong> ${phone}</p>
+                            <p><strong>Service:</strong> ${service}</p>
+                            <p><strong>Message:</strong> ${message}</p>
+                            `,
+                }),
+            })
+
+            const data = await res.json()
+
+            if (!res.ok) {
+                console.error('Email send failed:', data)
+                toast.error(data.message || 'Failed to send message.')
+                return
+            }
+
+            toast.success('Thank you for your message! We will get back to you within 24 hours.')
+
+            // Reset form
+            setFormData({
+                firstName: '',
+                email: '',
+                phone: '',
+                service: '',
+                message: '',
+            })
+        } catch (error) {
+            console.error('Send error:', JSON.stringify(error))
+            toast.error('Something went wrong. Please try again.')
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
 
     const contactInfo = [
         {
@@ -121,7 +156,9 @@ export default function ContactForm() {
                                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ duration: 0.7, ease: "anticipate", delay: 0.2 }}
                                 viewport={{ once: true, amount: 0.3 }}
+                                onSubmit={handleSubmit}
                             >
+                                <Toaster position="top-right" />
                                 <motion.div
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-6"
                                     initial={{ opacity: 0, x: -40 }}

@@ -133,7 +133,7 @@ export default function Home() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
-              className="md:w-[40%] h-[240px] sm:h-[320px] md:h-[50vh] flex flex-col justify-center items-start "
+              className="md:w-[40%] h-[240px] sm:h-[320px] md:h-[50vh] flex flex-col justify-center items-start mt-16 md:mt-0"
             >
               <div>
                 <h3 className='text-[28px] sm:text-[34px] md:text-[40px] font-[700] leading-[120%]'>Why Choose</h3>

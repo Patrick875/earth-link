@@ -220,7 +220,7 @@ export const fadeInUpContainer = {
 export const locations = [
 	{
 		country: "Senegal",
-		link:"/senegal",
+		link:"https://senegal.earthlinkgroup.com/",
 		city: "Dakar",
 		description: "A strategic West African market with a growing digital economy and stable business environment.",
 		icon: "fi fi-sn",
